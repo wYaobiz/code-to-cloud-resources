@@ -1,32 +1,62 @@
 # Chapter 8 · PHP
 
-Suggested solutions for the review questions and hands-on exercises covering server-side PHP — syntax, form handling, sessions, cookies, security functions, and generating dynamic HTML.
+Selected solutions for the review questions on server-side PHP, including syntax, data exchange, sessions, cookies, and security functions. See the [section introduction](index.md) for scope and the disclaimer.
 
-!!! note
-    Attempt each problem yourself before consulting these solutions. For exercises that build something, a complete reference implementation is linked under [Source Code](../code/index.md).
+### Problem 8.1
+**What PHP is.**
 
-## Review Questions
+PHP is a server-side scripting language used to build dynamic web pages and applications. The server runs the PHP code to produce output, usually HTML, which it then sends to the browser. PHP can process form input, work with files, and interact with databases, making it the application layer that ties a site's front end to its data.
 
-### What is a session in PHP and how does it maintain state across requests?
-A session stores user-specific data on the server between requests, identified by a session ID that the browser sends back (usually in a cookie) on each subsequent request. After calling `session_start()`, values placed in the `$_SESSION` superglobal persist across page loads for that user, which lets an application remember things like a logged-in user between otherwise stateless HTTP requests.
+### Problem 8.2
+**How PHP scripts execute.**
 
-### How do cookies differ from sessions, and when might you use cookies instead?
-Cookies are stored in the browser and sent with every request to the matching domain; session data lives on the server. Because cookies live on the client, they can persist after the browser closes (with an expiration date) and are useful for remembering preferences or a "remember me" token across visits. Sessions are better for sensitive or larger data, since nothing beyond the ID is exposed to the client.
+When a request arrives for a PHP file, the web server passes it to the PHP interpreter rather than returning the file directly. The interpreter runs the code, which may query a database or process input, and generates output such as HTML. The server then sends that generated output back to the browser, which never sees the original PHP source.
 
-### Give an example of how to securely handle file uploads in PHP.
-Validate before trusting anything: check the upload via `$_FILES`, confirm the MIME type and extension against an allow-list, verify the file size, and generate a new safe filename rather than using the client-supplied name. Move the file out of any web-executable directory with `move_uploaded_file()`, and never allow uploaded files to be executed as scripts.
+### Problem 8.6
+**Indexed vs. associative arrays.**
 
-### What is the purpose of `filter_var()`?
-`filter_var()` validates and sanitizes data against built-in filters — for example `FILTER_VALIDATE_EMAIL` to confirm an email address is well-formed, or `FILTER_SANITIZE_*` filters to strip unwanted characters. It centralizes common validation so you do not hand-write fragile regular expressions for standard formats.
+An indexed array uses numeric positions as keys, starting at zero, and is suited to ordered lists of values. An associative array uses named string keys, which is suited to mapping labels to values, such as a user's fields. Both are written with the same array syntax, but associative arrays let you retrieve a value by a meaningful name rather than a position.
 
-### How do `password_hash()` and `password_verify()` enhance security?
-`password_hash()` produces a salted, computationally expensive hash (using bcrypt or Argon2) so that stored passwords are not recoverable even if the database leaks. `password_verify()` checks a submitted password against a stored hash without your code ever handling the salt directly. Together they implement current best practice for password storage and replace insecure approaches like plain MD5/SHA-1.
+### Problem 8.8
+**$_GET vs. $_POST.**
 
-## Hands-On Exercises
+`$_GET` holds values sent through the URL query string, which are visible and limited in size, while `$_POST` holds values sent in the request body, which are not shown in the URL and can be larger. Use `$_GET` for safe, repeatable requests such as a search and `$_POST` for submissions that change data or carry sensitive information.
 
-### Exercise — Numbers and Their Squares
-**Goal.** Write a PHP script that dynamically generates an HTML table showing the numbers 1 to 10 and their squares.
+### Problem 8.9
+**== vs. ===.**
 
-**Approach.** Open a `<table>`, then loop with `for ($i = 1; $i <= 10; $i++)` and echo a `<tr>` containing two `<td>` cells: `$i` and `$i * $i`. Close the table after the loop. This demonstrates mixing PHP control flow with HTML output to produce data-driven markup.
+The equality operator `==` compares values after converting them to a common type, so `0 == "0"` is true. The identical operator `===` compares both value and type without conversion, so `0 === "0"` is false because one is an integer and the other a string. Using `===` avoids surprises from automatic type juggling.
 
-**Reference implementation:** [`src/ch08-php/squares-table/`](../code/index.md)
+### Problem 8.10
+**Sessions in PHP.**
+
+A session stores per-user data on the server between requests, identified by a session ID that the browser returns on each subsequent request, usually in a cookie. After calling `session_start()`, values placed in the `$_SESSION` array persist across page loads for that user, which is how an application remembers a logged-in user across otherwise stateless HTTP requests.
+
+### Problem 8.11
+**Cookies vs. sessions.**
+
+Cookies are stored in the browser and sent with every matching request, while session data lives on the server. Because cookies live on the client, they can persist after the browser closes and are useful for preferences or a long-lived "remember me" token. Sessions are better for sensitive or larger data, since only the session ID is exposed to the client.
+
+### Problem 8.13
+**filter_var().**
+
+`filter_var()` validates or sanitizes a value against a built-in filter, for example confirming a string is a well-formed email with FILTER_VALIDATE_EMAIL or stripping unwanted characters with a sanitizing filter. It centralizes common checks so you do not have to hand-write fragile patterns for standard formats.
+
+### Problem 8.14
+**password_hash() and password_verify().**
+
+`password_hash()` produces a salted, deliberately slow hash using a strong algorithm, so stored passwords cannot be recovered even if the database leaks. `password_verify()` checks a submitted password against a stored hash without your code handling the salt directly. Together they implement current best practice and replace insecure approaches like storing plain or simply hashed passwords.
+
+## Selected coding exercise
+
+### Problem 8.15: Numbers and Their Squares
+The script opens a table, loops from 1 to 10, and echoes a row with each number and its square:
+
+```php
+<table border="1">
+  <tr><th>Number</th><th>Square</th></tr>
+  <?php for ($i = 1; $i <= 10; $i++): ?>
+    <tr><td><?= $i ?></td><td><?= $i * $i ?></td></tr>
+  <?php endfor; ?>
+</table>
+```

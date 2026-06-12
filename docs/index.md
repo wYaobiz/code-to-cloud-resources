@@ -1,30 +1,25 @@
-# From Code to Cloud — Companion Resources
+# From Code to Cloud: Companion Resources
 
-Welcome to the companion resource site for **_From Code to Cloud: Developing Web Applications_** by Maura A. Deek and Fadi P. Deek (CRC Press / Taylor & Francis).
+Welcome to the companion resource site for **_From Code to Cloud: Developing Web Applications_** by Maura A. Deek, Fadi P. Deek, and Wei Yao, published by CRC Press (Taylor & Francis).
 
-This site hosts the supplementary materials that accompany the textbook:
+The book presents a clear, structured overview of how modern web systems are built and function, from foundational protocols all the way through full-stack development. It covers Internet protocols, HTML and CSS standards, client-side programming with JavaScript, server-side programming with PHP and MySQL, web application security, deployment and DevOps, and modern development practices. The chapters move deliberately from fundamentals to contemporary tools, so the material suits students, self-taught developers seeking structure, and professionals revisiting key concepts.
 
-- **Suggested Solutions** — worked answers and guidance for the review questions and hands-on exercises in each chapter.
-- **Source Code** — runnable example code organized by chapter, available to browse, clone, or download.
-- **Errata** — corrections and clarifications discovered after publication.
+This site hosts the supplementary materials that accompany the book.
 
-!!! note "How these resources are organized"
-    Each chapter in the book ends with **Review Questions** (conceptual) and **Hands-On Exercises** (implementation projects). On this site, conceptual questions get concise written answers, while larger exercises get an outline of the approach plus a link to a complete reference implementation under [Source Code](code/index.md).
+## What you will find here
 
-## Quick Start
+**Selected Solutions** offer suggested answers to a representative set of review questions from each chapter. They are for reference and self-study, not a complete answer key. See the [solutions introduction](solutions/index.md) for the full scope and disclaimer.
 
-1. Browse the **Suggested Solutions** in the left navigation, organized chapter by chapter.
-2. For exercises that build something, follow the link to the matching folder under **Source Code**.
-3. To run the example code locally, clone the repository:
+**Full Question Bank** lists every end-of-chapter question and exercise across all twelve chapters, labeled by type, as a reference for readers and instructors.
 
-    ```bash
-    git clone https://github.com/wYaobiz/code-to-cloud-resources.git
-    cd code-to-cloud-resources/src
-    ```
+**Source Code** holds runnable example code organized by chapter, available to browse, clone, or download.
 
-## About the Book
+**Errata** records corrections discovered after publication.
 
-_From Code to Cloud_ covers the full arc of web application development — from the protocols that move data across the Internet, through HTML, CSS, and JavaScript on the front end, to PHP, SQL/MySQL, security, and DevOps on the back end, ending with modern frameworks and deployment practices. The twelve chapters progress from web fundamentals to deploying production applications in the cloud.
+## How the solutions are organized
 
-!!! tip "A note for instructors"
-    If you are teaching from this book and would like access to additional instructor-only materials (answer keys, quizzes, term-project guidance), please contact the publisher.
+Each chapter ends with review questions that fall into three kinds, and the solutions treat them differently. Conceptual questions receive concise written answers. Small coding and SQL tasks receive a short reference answer where they illustrate a core technique. Open-ended projects and hands-on labs are listed in the question bank but not answered, since they have no single correct solution and are meant for independent practice.
+
+## A note for instructors
+
+If you are teaching from this book and would like access to additional instructor-only materials, please contact the publisher.

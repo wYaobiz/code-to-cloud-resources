@@ -8,7 +8,7 @@ Each chapter contains two categories of end-of-chapter material, and this site t
 
 **Review Questions** test conceptual understanding. For these, you will find a concise written answer that captures the key points. Use them to check your understanding after attempting the question on your own.
 
-**Hands-On Exercises** ask you to build something. For these, you will find an outline of the recommended approach, the key concepts involved, and a link to a complete, runnable reference implementation in the [Source Code](code/index.md) section. Treat the reference code as one valid solution among many, not the only correct answer.
+**Hands-On Exercises** ask you to build something. For these, the [Selected Solutions](solutions/index.md) give an outline or a short reference where appropriate, and the larger project exercises are listed in the [Full Question Bank](all-questions.md) without fixed answers, since they are meant for independent practice. Where a reference implementation exists, you will find it in the [Source Code](code/index.md) section.
 
 ## Recommended Workflow
 
@@ -22,4 +22,4 @@ Each chapter contains two categories of end-of-chapter material, and this site t
 
 ## Running the Code
 
-Most front-end examples (HTML, CSS, JavaScript) run directly in any modern web browser — just open the `.html` file. Server-side examples (PHP, SQL/MySQL) require a local server environment such as XAMPP, MAMP, or Docker. Each `src/` subfolder includes a short `README` describing how to run that example.
+Most front-end examples (HTML, CSS, JavaScript) run directly in any modern web browser, so you just open the `.html` file. Server-side examples (PHP, SQL/MySQL) require a local server environment such as XAMPP, MAMP, or Docker. Each `src/` subfolder includes a short `README` describing how to run that example.

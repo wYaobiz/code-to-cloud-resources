@@ -1,47 +1,48 @@
 # Chapter 12 · Modern Web Development
 
-Suggested solutions for the review questions and hands-on exercises covering modern web development — SPAs, the Virtual DOM, GraphQL, microservices, CI/CD, and emerging technologies.
-
-!!! note
-    Attempt each problem yourself before consulting these solutions. The hands-on exercises here are larger, multi-part projects; each links to a complete reference implementation under [Source Code](../code/index.md).
-
-## Review Questions
+Selected solutions for the review questions on SPAs, the Virtual DOM, GraphQL, microservices, and modern practices. See the [section introduction](index.md) for scope and the disclaimer.
 
 ### Problem 12.1
-**Compare and contrast server-side rendering (SSR) with Single Page Applications (SPAs).**
+**Server-side rendering vs. Single Page Applications.**
 
-With SSR, the server generates complete HTML for each request, so the first paint is fast and the content is readily indexed by search engines, at the cost of a full round trip per navigation. With SPAs, the browser loads once and updates views with JavaScript, giving a fluid app-like feel after load, but with a heavier initial download and extra work needed for SEO. SSR suits content-heavy, SEO-sensitive sites; SPAs suit highly interactive applications. Hybrid approaches combine both.
+With server-side rendering the server generates complete HTML for each request, so the first view appears quickly and the content is easy for search engines to index, at the cost of a full round trip per navigation. With an SPA the browser loads once and updates views with JavaScript, giving a fluid, app-like feel after load, but with a heavier initial download and extra work to make content indexable. Server-side rendering suits content-heavy, SEO-sensitive sites, while SPAs suit highly interactive applications; hybrid approaches combine both.
 
 ### Problem 12.2
-**Explain the Virtual DOM in React and how it improves performance.**
+**The Virtual DOM.**
 
-The Virtual DOM is a lightweight in-memory copy of the real DOM. When state changes, React builds a new virtual tree and *reconciles* it against the previous one, computing the minimal set of real DOM operations required. Because direct DOM manipulation is expensive, batching and minimizing those operations through reconciliation makes updates more efficient than naively re-rendering the page.
+The Virtual DOM is a lightweight in-memory representation of the real DOM. When state changes, React builds a new virtual tree and compares it against the previous one, a process called reconciliation, to compute the minimal set of real DOM operations needed. Because direct DOM manipulation is expensive, minimizing and batching those operations this way makes updates more efficient than re-rendering the page directly.
 
 ### Problem 12.3
-**What problems does GraphQL solve that REST APIs struggle with?**
+**What GraphQL solves.**
 
-REST endpoints often return fixed shapes, leading to *over-fetching* (receiving more fields than needed) or *under-fetching* (needing several requests to assemble one view). GraphQL lets the client request exactly the fields it needs in a single query, and its type system gives both API authors and consumers a self-documenting, validated contract.
+REST endpoints often return fixed shapes, which leads to over-fetching, where a response includes more fields than the client needs, and under-fetching, where several requests are required to assemble one view. GraphQL lets the client request exactly the fields it needs in a single query. Its type system also serves as a validated, self-documenting contract that benefits both the API developers and the consumers.
 
 ### Problem 12.4
-**Describe the difference between authentication and authorization, and how JWTs work.**
+**Authentication, authorization, and JWTs.**
 
-Authentication establishes *who* a user is; authorization determines *what* they are allowed to do. A JSON Web Token is a signed, self-contained token carrying claims about the user. The server verifies the signature rather than looking the session up in a store, which aids statelessness — but tokens must be transmitted over HTTPS, given sensible expirations, and handled carefully, since anyone holding a valid token can use it until it expires.
+Authentication establishes who a user is, while authorization determines what they may do. A JSON Web Token is a signed, self-contained token carrying claims about the user, which the server verifies by checking the signature rather than looking up a session. Security considerations include transmitting tokens only over HTTPS, setting sensible expirations, and protecting them carefully, since anyone holding a valid token can use it until it expires.
 
-!!! tip "Remaining questions"
-    Problems 12.5 through 12.15 (circuit breaker pattern, edge computing, Kubernetes, distributed tracing, the testing pyramid, Web Components, AI integration) follow the same format.
+### Problem 12.5
+**The circuit breaker pattern.**
 
-## Hands-On Exercises
+A circuit breaker prevents cascading failures by monitoring calls to a dependency and stopping further calls when that dependency is failing, so one struggling service does not drag down the rest. It has three states: closed, where calls flow normally; open, where calls are blocked after too many failures and fail fast; and half-open, where a few trial calls test whether the dependency has recovered before fully resuming.
 
-### Exercise 12.1 — React SPA with API Integration
-**Goal.** Build a product-catalog SPA in React backed by a small REST API.
+### Problem 12.7
+**Infrastructure as Code.**
 
-**Approach.** Scaffold with Vite. Use React Router for the product list, product detail, and cart views, with reusable components for cards and navigation. Build an Express API serving product data with pagination (`page`/`limit`) and proper CORS. Connect with `fetch`, handling loading states, error boundaries, and optimistic cart updates via `useState`, `useEffect`, and a custom hook.
+Infrastructure as Code defines and manages infrastructure through version-controlled configuration files rather than manual setup. It differs from traditional management by making environments reproducible, reviewable, and automatable, solving the problem of inconsistent, hard-to-reproduce servers. The new challenges it introduces include learning the tooling, managing state files carefully, and applying the same discipline of testing and review to infrastructure that one applies to application code.
 
-**Reference implementation:** [`src/ch12-modern/react-spa/`](../code/index.md)
+### Problem 12.9
+**WebAssembly.**
 
-### Exercise 12.2 — GraphQL API
-**Goal.** Transform the REST API from Exercise 12.1 into a GraphQL API.
+WebAssembly is a low-level binary format that runs in the browser at near-native speed, letting code written in languages like C, C++, or Rust execute on the web. It differs from JavaScript in being compiled and faster for computationally heavy work. It is well suited to tasks such as games, image or video editing, and scientific simulation, and it works alongside JavaScript, which still handles the DOM and overall page logic while delegating intensive computation to WebAssembly.
 
-**Approach.** Define a schema with `Product`, `Category`, and `Review` types and their relationships. Implement query types for single products and paginated lists, and mutation types for creating reviews and updating products. Demonstrate how a single GraphQL query replaces what previously took multiple REST calls.
+### Problem 12.13
+**The testing pyramid.**
 
-**Reference implementation:** [`src/ch12-modern/graphql-api/`](../code/index.md)
+The testing pyramid describes the recommended balance of test types: many fast, cheap unit tests at the base, fewer integration tests in the middle, and a small number of slow, broad end-to-end tests at the top. It is shaped as a pyramid because unit tests are quick to run and maintain while end-to-end tests are expensive and brittle, so relying mostly on the lower levels gives good coverage without an unmanageable maintenance burden.
+
+### Problem 12.14
+**Web Components.**
+
+Web Components are a browser-native way to create custom, reusable elements, in contrast to components tied to a specific framework. They rest on three pieces: Custom Elements, which let you define new tags; Shadow DOM, which encapsulates an element's structure and styles so they do not leak in or out; and HTML Templates, which define reusable markup that is not rendered until used. They solve the problem of building reusable, encapsulated UI that works across frameworks and plain pages alike.
