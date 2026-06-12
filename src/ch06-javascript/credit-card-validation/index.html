@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6.1 — Credit Card Validation</title>
+</head>
+<body>
+  <h1>Credit Card Validation</h1>
+
+  <!-- The onsubmit handler returns the result of validateCard().
+       Returning false cancels the form submission. -->
+  <form onsubmit="return validateCard()">
+    <input
+      type="text"
+      id="card"
+      name="card"
+      placeholder="Enter Card Number"
+      title="16 digits, a space after every 4 (e.g. 1234 5678 9012 3456)">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateCard() {
+      const value = document.getElementById("card").value;
+      // Four groups of four digits separated by single spaces.
+      const pattern = /^([0-9]{4} ){3}[0-9]{4}$/;
+
+      if (pattern.test(value)) {
+        alert("VALID CREDIT CARD ENTERED!");
+        return true;
+      } else {
+        alert("INVALID CREDIT CARD ENTERED! RE-ENTER");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+site_name: "From Code to Cloud — Resources"
+site_description: "Suggested solutions and source code for the textbook 'From Code to Cloud: Developing Web Applications'"
+site_author: "Maura A. Deek, Fadi P. Deek"
+
+# 重要：部署到 GitHub Pages 后，把下面两行的 wYaobiz 和仓库名换成你自己的。
+# 例如 https://wdeek.github.io/code-to-cloud-resources/
+site_url: "https://wYaobiz.github.io/code-to-cloud-resources/"
+repo_url: "https://github.com/wYaobiz/code-to-cloud-resources"
+repo_name: "code-to-cloud-resources"
+
+theme:
+  name: material
+  language: en
+  palette:
+    # 浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections      # 左侧导航分组展开
+    - navigation.top           # 回到顶部按钮
+    - navigation.footer        # 上一页/下一页
+    - search.suggest           # 搜索建议
+    - search.highlight         # 搜索结果高亮
+    - content.code.copy        # 代码块一键复制
+    - content.code.annotate    # 代码注释
+
+markdown_extensions:
+  - pymdownx.highlight:        # 代码高亮（与书中 minted 同底层 Pygments 引擎）
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.superfences       # 围栏代码块、嵌套
+  - pymdownx.inlinehilite      # 行内代码高亮
+  - pymdownx.tabbed:           # 标签页（可做 PDO / MySQLi 写法对照）
+      alternate_style: true
+  - admonition                 # 提示框（对应书中的 R 警告框）
+  - pymdownx.details           # 可折叠提示框
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - How to Use These Resources: how-to-use.md
+  - Suggested Solutions:
+      - "Ch 1 · Introduction": solutions/ch01-introduction.md
+      - "Ch 2 · Internet Protocols": solutions/ch02-internet-protocols.md
+      - "Ch 3 · HTML Core": solutions/ch03-html-core.md
+      - "Ch 4 · HTML Advanced": solutions/ch04-html-advanced.md
+      - "Ch 5 · CSS": solutions/ch05-css.md
+      - "Ch 6 · JavaScript": solutions/ch06-javascript.md
+      - "Ch 7 · Web Application Security": solutions/ch07-security.md
+      - "Ch 8 · PHP": solutions/ch08-php.md
+      - "Ch 9 · SQL & MySQL": solutions/ch09-sql-mysql.md
+      - "Ch 10 · PHP & MySQL Integration": solutions/ch10-php-mysql.md
+      - "Ch 11 · Web Server & DevOps": solutions/ch11-devops.md
+      - "Ch 12 · Modern Web Development": solutions/ch12-modern.md
+  - Source Code: code/index.md
+  - Errata: errata.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wYaobiz/code-to-cloud-resources
+
+copyright: "Copyright &copy; 2026 Maura A. Deek &amp; Fadi P. Deek. Published by CRC Press / Taylor &amp; Francis."
