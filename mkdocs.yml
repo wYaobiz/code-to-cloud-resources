@@ -67,7 +67,9 @@ nav:
       - "Ch 10 · PHP & MySQL Integration": solutions/ch10-php-mysql.md
       - "Ch 11 · Web Server & DevOps": solutions/ch11-devops.md
       - "Ch 12 · Modern Web Development": solutions/ch12-modern.md
-  - Source Code: code/index.md
+  - Source Code:
+      - "Overview": code/index.md
+      - "HTML Code Examples": code/ch03-html.md
   - Errata: errata.md
 
 extra:
