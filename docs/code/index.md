@@ -1,9 +1,9 @@
 # Source Code
 
-The repository's [`src/`](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/tree/main/src) directory holds all example and reference code, organized by chapter. You can browse it on GitHub or clone the whole repository to run things locally.
+The repository's [`src/`](https://github.com/wYaobiz/code-to-cloud-resources/tree/main/src) directory holds all example and reference code, organized by chapter. You can browse it on GitHub or clone the whole repository to run things locally.
 
 ```bash
-git clone https://github.com/<YOUR-USERNAME>/code-to-cloud-resources.git
+git clone https://github.com/wYaobiz/code-to-cloud-resources.git
 cd code-to-cloud-resources/src
 ```
 
@@ -41,4 +41,4 @@ Each subfolder's `README` gives the exact steps for that example, including any 
 
 ## License
 
-The source code in this repository is released under the MIT License, so you are free to use, modify, and learn from it. See the [`LICENSE`](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/LICENSE) file. The worked examples adapted from the course material are included with permission of the authors.
+The source code in this repository is released under the MIT License, so you are free to use, modify, and learn from it. See the [`LICENSE`](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/LICENSE) file. The worked examples adapted from the course material are included with permission of the authors.

@@ -47,7 +47,7 @@ This example builds a table of authors and their books, using the `colspan` attr
 
 **Produces:** a four-column table where the single "Author Name" header sits above the first two columns (first name and last name), while "Title of Book" and "Year Published" each head their own column.
 
-[View full source](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/src/ch03-html/table-colspan/index.html){ .md-button }
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/table-colspan/index.html){ .md-button }
 
 ## Lists
 
@@ -93,7 +93,7 @@ This example creates a heading styled in a blue cursive face, then an unordered 
 
 **Produces:** a cursive blue heading "Countries To Visit" above a bulleted list of three countries, each in its own color, with the cities indented as a sub-list beneath each country.
 
-[View full source](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/src/ch03-html/nested-list-unordered/index.html){ .md-button }
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/nested-list-unordered/index.html){ .md-button }
 
 ## Form Input Controls
 
@@ -119,7 +119,7 @@ A short form that pairs a plain text field for a name with a numeric field that 
 
 **Produces:** two labeled fields on separate lines. The first accepts any text, and the second accepts only numeric entry, with up and down spinner controls.
 
-[View full source](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/src/ch03-html/input-number/index.html){ .md-button }
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-number/index.html){ .md-button }
 
 ### Range input
 
@@ -145,7 +145,7 @@ This example uses `type="range"` to create a slider for a pain level from 1 (min
 
 **Produces:** a "Pain Level" label above a draggable slider, with "Minimal" to its left and "Severe" to its right, stepping in whole numbers from 1 to 10.
 
-[View full source](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/src/ch03-html/input-range/index.html){ .md-button }
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-range/index.html){ .md-button }
 
 ## Putting Controls Together
 
@@ -183,4 +183,4 @@ This example combines several controls into one working form: text and password 
 
 **Produces:** a "LOGIN PAGE" heading above a form with a username field, a password field that masks input, a transaction dropdown, and a SUBMIT button. On submission the form would post the data to the named PHP script after the validation function runs.
 
-[View full source](https://github.com/<YOUR-USERNAME>/code-to-cloud-resources/blob/main/src/ch03-html/login-form/index.html){ .md-button }
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/login-form/index.html){ .md-button }

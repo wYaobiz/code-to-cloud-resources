@@ -2,10 +2,10 @@ site_name: "From Code to Cloud — Resources"
 site_description: "Suggested solutions and source code for the textbook 'From Code to Cloud: Developing Web Applications'"
 site_author: "Maura A. Deek, Fadi P. Deek"
 
-# 重要：部署到 GitHub Pages 后，把下面两行的 <YOUR-USERNAME> 和仓库名换成你自己的。
+# 重要：部署到 GitHub Pages 后，把下面两行的 wYaobiz 和仓库名换成你自己的。
 # 例如 https://wdeek.github.io/code-to-cloud-resources/
-site_url: "https://<YOUR-USERNAME>.github.io/code-to-cloud-resources/"
-repo_url: "https://github.com/<YOUR-USERNAME>/code-to-cloud-resources"
+site_url: "https://wYaobiz.github.io/code-to-cloud-resources/"
+repo_url: "https://github.com/wYaobiz/code-to-cloud-resources"
 repo_name: "code-to-cloud-resources"
 
 theme:
@@ -75,6 +75,6 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/<YOUR-USERNAME>/code-to-cloud-resources
+      link: https://github.com/wYaobiz/code-to-cloud-resources
 
 copyright: "Copyright &copy; 2026 Maura A. Deek &amp; Fadi P. Deek. Published by CRC Press / Taylor &amp; Francis."
