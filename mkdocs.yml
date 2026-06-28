@@ -51,6 +51,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
+hooks:
+  - hooks/copy_examples.py
+
 extra_css:
   - stylesheets/extra.css
 

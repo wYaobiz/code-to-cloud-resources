@@ -2,8 +2,8 @@
 
 Worked code examples for the HTML chapters, drawn from the material used in the course. Each example shows the complete, runnable source with explanatory comments, followed by a note on what it produces. Every example lives in its own folder under `src/ch03-html/` so you can open it directly, view the source, or download it.
 
-!!! note "How to run these"
-    Each example is a standalone `.html` file. Open the linked file in any web browser to see the live result, or browse the source on GitHub. No server is required for these HTML examples (the file-upload and login forms reference a server-side script, so submitting them would need a server, but the markup still renders).
+!!! note "Live previews"
+    Each example below shows a live preview rendered directly in your browser, followed by a button to view the full source on GitHub. No server is required for these HTML examples (the file-upload and login forms reference a server-side script, so submitting them would need a server, but the markup still renders).
 
 ## Form Input Controls
 
@@ -26,6 +26,8 @@ A single `date` input that lets the user choose a date from a calendar control.
 ```
 
 **Produces:** a label followed by a date field that opens a calendar picker when clicked.
+
+<iframe src="../../examples/ch03-html/input-date/index.html" style="width:100%; height:90px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of input-date" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-date/index.html){ .md-button }
 
@@ -50,6 +52,8 @@ A short form pairing a plain text field for a name with a numeric field that acc
 ```
 
 **Produces:** two labeled fields on separate lines. The first accepts any text, and the second accepts only numeric entry with up and down spinner controls.
+
+<iframe src="../../examples/ch03-html/input-number/index.html" style="width:100%; height:110px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of input-number" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-number/index.html){ .md-button }
 
@@ -77,6 +81,8 @@ Uses `type="range"` to create a slider for a pain level from 1 (minimal) to 10 (
 
 **Produces:** a "Pain Level" label above a draggable slider, with "Minimal" to its left and "Severe" to its right, stepping in whole numbers from 1 to 10.
 
+<iframe src="../../examples/ch03-html/input-range/index.html" style="width:100%; height:110px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of input-range" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-range/index.html){ .md-button }
 
 ### File upload input
@@ -100,6 +106,8 @@ A file-upload control inside a form. The form sets `enctype="multipart/form-data
 ```
 
 **Produces:** a label and a file-chooser button that opens the operating system's file dialog when clicked.
+
+<iframe src="../../examples/ch03-html/input-file/index.html" style="width:100%; height:90px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of input-file" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/input-file/index.html){ .md-button }
 
@@ -148,6 +156,8 @@ One form gathering several input types: text, password, a multi-line textarea, s
 
 **Produces:** a series of labeled fields, one per line, each rendered according to its type. The password field masks input, the email field is preset to a sample address, and the textarea spans several lines.
 
+<iframe src="../../examples/ch03-html/text-input-types/index.html" style="width:100%; height:430px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of text-input-types" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/text-input-types/index.html){ .md-button }
 
 ## Lists
@@ -194,6 +204,8 @@ A heading styled in a blue cursive face, then an unordered list of countries whe
 
 **Produces:** a cursive blue heading above a bulleted list of three colored countries, each with its cities indented as a sub-list beneath it.
 
+<iframe src="../../examples/ch03-html/nested-list-unordered/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of nested-list-unordered" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/nested-list-unordered/index.html){ .md-button }
 
 ### Nested ordered lists
@@ -238,6 +250,8 @@ The same structure as the unordered example, but using ordered lists so each lev
 
 **Produces:** a cursive blue heading above a numbered list of three colored countries, each with its cities numbered as an indented sub-list.
 
+<iframe src="../../examples/ch03-html/nested-list-ordered/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of nested-list-ordered" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/nested-list-ordered/index.html){ .md-button }
 
 ### Description list
@@ -272,6 +286,8 @@ A description list (`dl`) that pairs each country name as a data term (`dt`) wit
 ```
 
 **Produces:** a cursive blue heading above three country names, each followed by its indented nickname.
+
+<iframe src="../../examples/ch03-html/description-list/index.html" style="width:100%; height:200px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of description-list" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/description-list/index.html){ .md-button }
 
@@ -326,6 +342,8 @@ Nested ordered lists where each city is followed by a paragraph describing it, s
 
 **Produces:** a numbered list of countries and cities, with a descriptive paragraph under each city.
 
+<iframe src="../../examples/ch03-html/list-with-paragraphs/index.html" style="width:100%; height:520px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of list-with-paragraphs" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/list-with-paragraphs/index.html){ .md-button }
 
 ## Dropdown Menus
@@ -358,6 +376,8 @@ A `select` element with the `multiple` attribute, which lets the user choose sev
 ```
 
 **Produces:** a list box showing the options with Italy preselected, and a note explaining how to hold Ctrl or Command to select several.
+
+<iframe src="../../examples/ch03-html/select-multiple/index.html" style="width:100%; height:160px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of select-multiple" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/select-multiple/index.html){ .md-button }
 
@@ -400,6 +420,8 @@ The `optgroup` element groups related options under a labeled heading inside a d
 
 **Produces:** a dropdown whose options are grouped under bold country labels (Ireland, Italy, Spain), each with its cities listed beneath.
 
+<iframe src="../../examples/ch03-html/select-optgroup/index.html" style="width:100%; height:110px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of select-optgroup" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/select-optgroup/index.html){ .md-button }
 
 ### Select with size attribute
@@ -429,6 +451,8 @@ The `size` attribute on a `select` element displays a fixed number of options as
 ```
 
 **Produces:** a label above a two-row list box showing the country options, scrollable to reach the rest.
+
+<iframe src="../../examples/ch03-html/select-size/index.html" style="width:100%; height:130px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of select-size" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/select-size/index.html){ .md-button }
 
@@ -485,6 +509,8 @@ A basic table of children's authors with a header row and data rows, styled with
 ```
 
 **Produces:** a three-column table with a shaded header row and four author entries, all cells centered and bordered.
+
+<iframe src="../../examples/ch03-html/table-basic/index.html" style="width:100%; height:200px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of table-basic" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/table-basic/index.html){ .md-button }
 
@@ -544,6 +570,8 @@ Uses the `colspan` attribute so a single header cell spans two columns. Here the
 ```
 
 **Produces:** a four-column table where the single "Author Name" header sits above the first two columns, while "Title of Book" and "Year Published" each head their own column.
+
+<iframe src="../../examples/ch03-html/table-colspan/index.html" style="width:100%; height:200px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of table-colspan" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/table-colspan/index.html){ .md-button }
 
@@ -619,6 +647,8 @@ Uses the `rowspan` attribute so a single cell spans two rows, here letting each 
 
 **Produces:** a table where each "Title of Book" header cell stretches down across two rows of titles for the same author.
 
+<iframe src="../../examples/ch03-html/table-rowspan/index.html" style="width:100%; height:480px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of table-rowspan" loading="lazy"></iframe>
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/table-rowspan/index.html){ .md-button }
 
 ## Putting Controls Together
@@ -672,5 +702,7 @@ Combines several controls into one working form: text and password fields for cr
 ```
 
 **Produces:** a "LOGIN PAGE" heading above a form with a username field, a masked password field, a transaction dropdown, and a SUBMIT button.
+
+<iframe src="../../examples/ch03-html/login-form/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of login-form" loading="lazy"></iframe>
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch03-html/login-form/index.html){ .md-button }
