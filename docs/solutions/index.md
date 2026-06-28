@@ -13,7 +13,7 @@ The book's end-of-chapter material falls into three kinds, and this section trea
 
 **Small coding and SQL tasks** that have a clear, short reference answer are included where they illustrate a core technique.
 
-**Open-ended projects, labs, and hands-on builds** (for example, building a React single page application, setting up a monitoring dashboard, or writing an Ansible playbook) are not answered here. These have no single correct solution and depend on the reader's environment and choices. Providing a fixed answer would work against their purpose, which is hands-on practice. Every one of these is still listed in the [full question bank](../all-questions.md) for reference.
+**Open-ended projects, labs, and hands-on builds** (for example, building a React single page application, setting up a monitoring dashboard, or writing an Ansible playbook) are not answered here. These have no single correct solution and depend on the reader's environment and choices. Providing a fixed answer would work against their purpose, which is hands-on practice.
 
 ## Navigating the solutions
 

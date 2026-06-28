@@ -8,7 +8,7 @@ Each chapter contains two categories of end-of-chapter material, and this site t
 
 **Review Questions** test conceptual understanding. For these, you will find a concise written answer that captures the key points. Use them to check your understanding after attempting the question on your own.
 
-**Hands-On Exercises** ask you to build something. For these, the [Selected Solutions](solutions/index.md) give an outline or a short reference where appropriate, and the larger project exercises are listed in the [Full Question Bank](all-questions.md) without fixed answers, since they are meant for independent practice. Where a reference implementation exists, you will find it in the [Source Code](code/index.md) section.
+**Hands-On Exercises** ask you to build something. For these, the [Selected Solutions](solutions/index.md) give an outline or a short reference where appropriate. The larger project exercises are left for independent practice, since they have no single fixed answer. Where a reference implementation exists, you will find it in the [Source Code](code/index.md) section.
 
 ## Recommended Workflow
 

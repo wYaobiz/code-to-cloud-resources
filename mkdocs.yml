@@ -1,4 +1,4 @@
-site_name: "From Code to Cloud — Resources"
+site_name: "From Code to Cloud: Developing Web Applications — Resources"
 site_description: "Suggested solutions and source code for the textbook 'From Code to Cloud: Developing Web Applications'"
 site_author: "Maura A. Deek, Fadi P. Deek"
 
@@ -51,6 +51,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_css:
+  - stylesheets/extra.css
+
 nav:
   - Home: index.md
   - How to Use These Resources: how-to-use.md
@@ -77,4 +80,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/wYaobiz/code-to-cloud-resources
 
-copyright: "Copyright &copy; 2026 Maura A. Deek &amp; Fadi P. Deek. Published by CRC Press / Taylor &amp; Francis."
+copyright: "Copyright &copy; 2026 Maura A. Deek, Fadi P. Deek, and Wei Yao. Published by Taylor &amp; Francis Group - Auerbach Publications."
