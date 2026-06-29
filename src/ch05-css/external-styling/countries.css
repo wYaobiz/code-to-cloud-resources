@@ -1,0 +1,15 @@
+/* External stylesheet for the Countries To Visit page */
+h1 {
+  color: blue;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+li {
+  color: green;
+  font-size: 24pt;
+}
+
+ul {
+  font-style: italic;
+}
