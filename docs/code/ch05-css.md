@@ -5,6 +5,424 @@ Worked code examples for the CSS chapter, drawn from the material used in the co
 !!! note "Live previews"
     Each example below shows a live preview rendered directly in your browser, followed by a button to view the full source on GitHub. These CSS examples run entirely in the browser, so no server is required.
 
+## The Box Model
+
+### Box model with box-sizing
+
+Two boxes with the same width and height; the second adds padding. With `box-sizing: border-box`, padding is drawn inside the declared size.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The Box Model</title>
+  <!-- Two boxes with the same width and height; the second adds padding.
+       box-sizing: border-box keeps the total size fixed. -->
+  <style>
+    .paranopadding {
+      width: 500px;
+      height: 250px;
+      border: 2px solid coral;
+      box-sizing: border-box;
+    }
+    .parawithpadding {
+      width: 500px;
+      height: 250px;
+      padding: 100px;
+      border: 2px solid blueviolet;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <p>Compare the rendering of two paragraphs</p>
+  <p class="paranopadding">This paragraph has no padding property</p>
+  <p class="parawithpadding">This paragraph has padding property</p>
+</body>
+</html>
+```
+
+**Produces:** two bordered boxes of equal outer size, where the padded box keeps the same dimensions because border-box includes the padding.
+
+<iframe src="../../examples/ch05-css/box-model/index.html" style="width:100%; height:480px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of box-model" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/box-model/index.html){ .md-button }
+
+### Box model without box-sizing
+
+The same two boxes without `box-sizing`, so padding adds to the declared width and height.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The Box Model</title>
+  <!-- Same two boxes, but without box-sizing, so padding adds to the total size. -->
+  <style>
+    .paranopadding {
+      width: 500px;
+      height: 250px;
+      border: 2px solid coral;
+    }
+    .parawithpadding {
+      width: 500px;
+      height: 250px;
+      padding: 100px;
+      border: 2px solid blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <p>Compare the rendering of two paragraphs</p>
+  <p class="paranopadding">This paragraph has no padding property</p>
+  <p class="parawithpadding">This paragraph has padding property</p>
+</body>
+</html>
+```
+
+**Produces:** two bordered boxes where the padded one is visibly larger, since padding is added on top of the declared size.
+
+<iframe src="../../examples/ch05-css/box-model-no-box-sizing/index.html" style="width:100%; height:560px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of box-model-no-box-sizing" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/box-model-no-box-sizing/index.html){ .md-button }
+
+### Border property
+
+Different border styles, widths, and per-side colors applied to a heading, paragraph, list, and list items.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Border Property</title>
+  <!-- Different border styles, widths, and per-side colors on several elements. -->
+  <style>
+    h1 {
+      color: blueviolet;
+      font-weight: bold;
+      font-family: Snell Roundhand;
+      font-size: 2em;
+      padding-left: 550px;
+      border: dotted 4pt;
+      border-top-color: coral;
+      border-right-color: forestgreen;
+      border-bottom-color: mediumorchid;
+      border-left-color: blue;
+    }
+    p {
+      color: cornflowerblue;
+      font-weight: bold;
+      font-family: Arial;
+      padding-left: 500px;
+      border: solid 4pt;
+      border-color: coral forestgreen mediumorchid blue;
+    }
+    ul {
+      border-top: dashed 2pt forestgreen;
+      border-bottom: solid 2pt orangered;
+      padding-left: 100px;
+      margin: 25px 25px;
+    }
+    li {
+      color: maroon;
+      font-weight: bold;
+      border: solid 2pt dodgerblue;
+      padding-left: 100px;
+      margin: 10px 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Web Applications</h1>
+  <p>Below is a list of different countries and cities to visit</p>
+  <ul>
+    <li>Ireland</li>
+    <li>Spain</li>
+    <li>Italy</li>
+  </ul>
+</body>
+</html>
+```
+
+**Produces:** elements with dotted, solid, and dashed borders, some using a different color on each side.
+
+<iframe src="../../examples/ch05-css/border/index.html" style="width:100%; height:360px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of border" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/border/index.html){ .md-button }
+
+### Overflow property
+
+A small box whose content does not fit. `overflow: visible` lets the content spill outside rather than be clipped.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Overflow Property</title>
+  <!-- A small box whose content does not fit; overflow:visible lets it spill out. -->
+  <style>
+    .paranopadding {
+      width: 200px;
+      height: 75px;
+      overflow: visible;
+      border: 2px solid coral;
+    }
+  </style>
+</head>
+<body>
+  <p class="paranopadding">This paragraph will be used to illustrate the overflow property in CSS. In this example the content of the element does not fit within its box. By giving the overflow property the value of visible the content overflows outside of the element's box allowing for its entire content to be displayed. This is the default for the property.</p>
+</body>
+</html>
+```
+
+**Produces:** a small bordered box whose text overflows beyond its edges because overflow is set to visible.
+
+<iframe src="../../examples/ch05-css/overflow/index.html" style="width:100%; height:220px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of overflow" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/overflow/index.html){ .md-button }
+
+## Fonts and Color
+
+### Font families and sizes
+
+Different `font-family` values on the body, headings, and paragraphs, with a pale yellow page background.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Font Families</title>
+  <!-- Different font families on the body, headings, and paragraphs,
+       with a pale yellow page background. -->
+  <style>
+    body {
+      background-color: #FFFFCC; /* pale yellow */
+    }
+    h1 {
+      font-family: Luminari;
+      color: blueviolet;
+    }
+    h2 {
+      font-family: Luminari;
+      color: blue;
+    }
+    p {
+      font-family: cursive;
+      color: rgb(80, 200, 120); /* emerald green */
+      font-weight: bold;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Web Applications</h1>
+  <h2>Front End Languages taught:</h2>
+  <p>HTML, CSS, JavaScript</p>
+  <h2>Back End Languages taught:</h2>
+  <p>SQL and PHP</p>
+</body>
+</html>
+```
+
+**Produces:** a pale yellow page where headings and paragraphs each use a distinct font family and color.
+
+<iframe src="../../examples/ch05-css/font-family/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of font-family" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/font-family/index.html){ .md-button }
+
+### Font types and the font shorthand
+
+Several font families and sizes using different units (px, em, percent, pt), ending with the `font` shorthand.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Font Types</title>
+  <!-- Several font families and sizes, ending with the font shorthand property. -->
+  <style>
+    #p1 {
+      font-family: "Times New Roman";
+      color: blue;
+      font-size: 24px;
+    }
+    #p2 {
+      font-family: Verdana;
+      color: green;
+      font-size: 1.5em;
+    }
+    #p3 {
+      font-family: "Courier New";
+      color: mediumvioletred;
+      font-size: 150%;
+    }
+    #p4 {
+      font-family: "Brush Script MT";
+      color: blueviolet;
+      font-size: 18pt;
+    }
+    #p5 {
+      font-family: Luminari;
+      color: dodgerblue;
+      font-size: 24px;
+    }
+    #p6 {
+      font: italic small-caps bold 24px/40px Georgia;
+      color: crimson;
+    }
+  </style>
+</head>
+<body>
+  <p id="p1">This sentence demonstrates the SERIF font family using Times New Roman</p>
+  <p id="p2">This sentence demonstrates the SANS-SERIF font family using Verdana</p>
+  <p id="p3">This sentence demonstrates the MONOSPACE font family using Courier New</p>
+  <p id="p4">This sentence demonstrates the CURSIVE font family using Brush Script MT</p>
+  <p id="p5">This sentence demonstrates the FANTASY font family using Luminari</p>
+  <p id="p6">This sentence demonstrates the font shorthand property</p>
+</body>
+</html>
+```
+
+**Produces:** six sentences, each in a different font family and size, the last set with the combined font shorthand.
+
+<iframe src="../../examples/ch05-css/font-types/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of font-types" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/font-types/index.html){ .md-button }
+
+### Methods for setting color
+
+Color set four ways: `rgba`, `hsl`, `hsl`, and `hsla`, including alpha for opacity.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Setting Color</title>
+  <!-- Color set four ways: rgba, hsl, hsl, and hsla. -->
+  <style>
+    #p1 {
+      font-family: Luminari;
+      color: rgba(0, 0, 200, 0.3); /* blue at 30% opacity */
+    }
+    #p2 {
+      font-family: Luminari;
+      color: hsl(100, 100%, 25%); /* dark green */
+    }
+    #p3 {
+      font-family: Luminari;
+      color: hsl(150, 75%, 50%); /* medium green */
+    }
+    #p4 {
+      font-family: Luminari;
+      color: hsla(300, 100%, 75%, 0.75); /* magenta at 75% opacity */
+    }
+  </style>
+</head>
+<body>
+  <p id="p1">This color is set with rgba</p>
+  <p id="p2">This color is set with hsl</p>
+  <p id="p3">This color is set with hsl</p>
+  <p id="p4">This color is set with hsla</p>
+</body>
+</html>
+```
+
+**Produces:** four lines of text, each colored through a different CSS color function, two of them partly transparent.
+
+<iframe src="../../examples/ch05-css/color-methods/index.html" style="width:100%; height:220px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of color-methods" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/color-methods/index.html){ .md-button }
+
+## Inheritance
+
+### Inheritance of properties
+
+Child elements inherit values such as `font-size` and `font-family` from the body, while each sets its own color.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Inheritance</title>
+  <!-- Child paragraphs inherit font-size, border, and font-family from body,
+       while each id sets its own color. -->
+  <style>
+    body {
+      font-size: 30px;
+      border: 6pt dashed orangered;
+      font-family: cursive;
+    }
+    #para1 { color: limegreen; }
+    #para2 { color: blueviolet; }
+    #para3 { color: dodgerblue; }
+  </style>
+</head>
+<body>
+  <p id="para1">This is the parent paragraph #para1</p>
+  <p id="para2">This a child paragraph of #para2</p>
+  <p id="para3">This a child paragraph of #para3</p>
+</body>
+</html>
+```
+
+**Produces:** paragraphs that share an inherited font and size from the body but display in their own colors.
+
+<iframe src="../../examples/ch05-css/inheritance/index.html" style="width:100%; height:280px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of inheritance" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/inheritance/index.html){ .md-button }
+
+### The inherit property value
+
+The `inherit` keyword makes a property explicitly take its parent's value, here applying the body's border to a paragraph.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The inherit Value</title>
+  <!-- #para1 uses border:inherit to take the body's border explicitly. -->
+  <style>
+    body {
+      font-size: 30px;
+      border: 6pt dashed orangered;
+      font-family: cursive;
+    }
+    #para1 {
+      color: limegreen;
+      border: inherit;
+    }
+    #para2 {
+      color: blueviolet;
+      border: 5pt dotted magenta;
+    }
+    #para3 {
+      color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+  <p id="para1">This paragraph is styled by #para1</p>
+  <p id="para2">This paragraph is styled by #para2</p>
+  <p id="para3">This paragraph is styled by #para3</p>
+</body>
+</html>
+```
+
+**Produces:** three paragraphs where one explicitly inherits the body's dashed border, one sets its own dotted border, and one has none.
+
+<iframe src="../../examples/ch05-css/inherit-property/index.html" style="width:100%; height:320px; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; background:white; margin-bottom:0.5rem;" title="Live preview of inherit-property" loading="lazy"></iframe>
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch05-css/inherit-property/index.html){ .md-button }
+
 ## Ways to Apply CSS
 
 ### Inline styling

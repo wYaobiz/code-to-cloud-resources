@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The inherit Value</title>
+  <!-- #para1 uses border:inherit to take the body's border explicitly. -->
+  <style>
+    body {
+      font-size: 30px;
+      border: 6pt dashed orangered;
+      font-family: cursive;
+    }
+    #para1 {
+      color: limegreen;
+      border: inherit;
+    }
+    #para2 {
+      color: blueviolet;
+      border: 5pt dotted magenta;
+    }
+    #para3 {
+      color: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+  <p id="para1">This paragraph is styled by #para1</p>
+  <p id="para2">This paragraph is styled by #para2</p>
+  <p id="para3">This paragraph is styled by #para3</p>
+</body>
+</html>
