@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if example</title>
+<script>
+//JavaScript function that checks the value entered against an if - else statement
+function getMonth()
+{
+let monthentered = document.getElementById("month").value;
+//If statement that determines if the month entered is a summer month
+if (monthentered >= 6 && monthentered <=8)
+  {
+    alert ("WELCOME to Summer");
+  }
+//Else statement executed if it is not a summer month
+else
+ {
+    alert("The month entered is not a Summer month")
+ }
+}
+</script>
+</head>
+<body>
+<!-- Form to enter month data -->
+<form method = "GET" onsubmit="getMonth();">
+<label for="month">Enter a month as a digit</label>
+  <input type="text" id="month">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

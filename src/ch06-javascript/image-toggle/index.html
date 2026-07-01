@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"/>
+ <title>JavaScript - Changing images between SunRise and Full Moon</title>
+ <script type="text/javascript">
+  /* This program will swap an image when it is clicked by using the getElementById() method
+ The program will use an current_image variable to keep track of which image is currently displayed
+ We can use an IF statement to check if the orange picture is being displayed,
+ then swap with the other one, and vice versa. Initially image will be sunrise.
+ */
+ var current_image = 'Sunrise';
+ function swapimage(){
+ var initial_image = document.getElementById('sunrise');
+ if(current_image=='Sunrise')
+  {
+   initial_image.src='fullmoon.jpeg';
+   current_image='Fullmoon';
+  }
+ else
+  {
+   initial_image.src='sunrise.jpeg';
+   current_image='Sunrise';
+  }
+ }
+</script>
+</head>
+<body>
+  <img src="sunrise.jpeg" alt="Sunrise" id="sunrise" onclick="swapimage();">
+</body>
+</html>

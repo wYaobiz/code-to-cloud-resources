@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for example</title>
+<script>
+//JavaScript that uses a do..while loop to print out a multiplication table
+function Multiply()
+{
+//Retrieve the data entered
+let factor = document.getElementById("factor").value;
+counter = 0;
+do
+{
+   product = counter * factor;
+     document.write(counter + " multiplied by " +  factor + " = " + product);
+   document.write("<br><br>");
+  counter++;
+ }
+while(counter <= 12)
+}
+</script>
+</head>
+<body>
+<!--Form to enter factor for multiplication table -->
+<h1 style ="color:green">Learn your Multiplication Tables</h1>
+<form method = "GET" onsubmit="Multiply();">
+ <label for="Mulitplier" style = "color: blue; font-weight:bold;">Enter the factor of the Multiplication table you want to learn:</label>
+  <input type="text" id="factor" >
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

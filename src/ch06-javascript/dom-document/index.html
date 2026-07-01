@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The DOM document Property</title>
+</head>
+<body>
+  <h1>My Favorite Foods Around the World</h1>
+  <div id="foodList">
+      <p>Kibbeh</p>
+    </div>
+</body>
+<script>
+  // creates a text node for description of food
+  let kibbeh = document.createTextNode(" Description - A typical Lebanese dish made with   made with ground lamb, cracked bulgur wheat, and spices");
+  // append new text node to the body of the document
+  document.body.appendChild(kibbeh);
+  // creates an element line break (<br>)
+  let newlinebreak = document.createElement("br");
+  // append new element to the body of the document
+  document.body.appendChild(newlinebreak);
+  //creates a new <div> element
+  let newdiv = document.createElement("div");
+  //creates a new paragraph (<p></p>) element
+  let paragraph1 = document.createElement("p");
+  // creates a text node food item
+  let newfood = document.createTextNode("Irish Soda Bread");
+  // append new text node to the paragraph element
+  paragraph1.appendChild(newfood);
+  // append new paragraph element to the body of the document
+  document.body.appendChild(paragraph1);
+  // append new div element to the body of the document
+  document.body.appendChild(newdiv);
+  //creates a new paragraph (<p></p>) element
+  let paragraph2 = document.createElement("p");
+  //creates a description for Irish Soda Bread
+  let newdescription = document.createTextNode("A staple in Irish households it is made with flour, baking soda, buttermilk, butter eggs, sugar, salt and raisins");
+  // append new text node to the paragraph element
+  paragraph2.appendChild(newdescription);
+  // append new paragraph element to the body of the document
+  document.body.appendChild(paragraph2);
+  // append new div element to the body of the document
+  document.body.appendChild(newdiv);
+</script>
+</html>

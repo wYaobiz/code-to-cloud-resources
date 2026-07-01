@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>getElementById via a form</title>
+<script>
+ function getInformation()
+Retrieves the data entered in to the HTML form
+  {    let employeeName = document.getElementById("employeeName").value;
+    let employeeID = document.getElementById("employeeID").value;
+    document.write("The name of the employee is: " + employeeName);
+  document.write("<br>");
+  document.write("The ID of the employee is: " + employeeID);
+  }
+The onsubmit button will call the JavaScript function getInformation()
+ </script></head>
+<body>
+  <form method = "GET"  onsubmit="return getInformation();">
+     Enter your Name:<input type= "text" id="employeeName"/>
+     <br>
+     Enter your ID Number:<input type= "text" id="employeeID"/>
+     <br>
+     <input type="submit" value= "SUBMIT"/>
+  </form>
+</body>
+</html>

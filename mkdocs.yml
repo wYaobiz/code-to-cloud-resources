@@ -77,6 +77,7 @@ nav:
       - "Overview": code/index.md
       - "HTML Code Examples": code/ch03-html.md
       - "CSS Code Examples": code/ch05-css.md
+      - "JavaScript Code Examples": code/ch06-javascript.md
   - Errata: errata.md
 
 extra:
