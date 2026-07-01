@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mouse Over and Mouse Out</title>
+  <style>
+    .MouseOutText {
+      font-size: 25pt;
+      font-family: italic;
+      color: blue;
+    }
+    .MouseOverText {
+      font-size: 20pt;
+      font-family: 'Times New Roman';
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div id="TextToChange" onmouseover="mouseOver()" onmouseout="mouseOut()">
+    See what happens when you move the mouse on and off this text!!!!!
+  </div>
+  <script>
+    function mouseOver() {
+      document.getElementById("TextToChange").className = "MouseOverText";
+    }
+    function mouseOut() {
+      document.getElementById("TextToChange").className = "MouseOutText";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Check Credit Card</title>
+<script>
+//Function to validate credit card number
+function checkcard()
+{
+   //REGEX pattern for a credit card number which matches the token [0-9] exactly 4 times. This token must consist of 4 digits
+  let pattern = /^([0-9]{4} ){3}[0-9]{4}$/;
+  //Retrieve the valueentered by the user from the form
+  let cardentered= document.getElementById("card").value
+  //check credit card number entered against REGEX pattern. Output is based on whether it matches or not
+  if (cardentered.search (pattern) == -1 )
+   {
+   alert ("INVALID CREDIT CARD ENTERED! RE-ENTER")
+     return false;
+   }
+  else
+   {
+  alert ("VALID CREDIT CARD ENTERED!")
+  return true;
+   }
+}
+</script>
+</head>
+<body>
+<!-- HTML form to enter credit cars number  -->
+<form action="" onsubmit="return checkcard()">
+   Enter Card #: <input type="text" id = "card" name="card" placeholder="Enter Card Number" title="A Valid Credit card will consist of 16 digits and has a space after every 4 digits"/>
+   <br>
+   <br>
+   <input type="submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.MouseOutText
+  {
+      font-size:25pt;
+      font-family: 'italic';
+      color:blue;
+      position:relative;
+      left: 30px;
+  }
+.MouseOverText
+  {
+      font-size:20pt;
+      font-family: 'Times New Roman';
+      color: green;
+      position:relative;
+      left: 500px;
+  }
+</style>
+</head>
+<body>
+  <p >
+    <span class="regText" id="phrase" onmouseenter="mouseOver()"
+      onmouseleave="mouseOut()">
+       See what happens when you move the mouse on and off this text!!!!!
+    </span>
+  </p>
+<script>
+function mouseOver(phrase)
+{
+   document.getElementById("phrase").className= "MouseOverText";
+ }
+function mouseOut(phrase)
+{
+   document.getElementById("phrase").className= "MouseOutText";
+}
+</script>
+</body>
+</html>

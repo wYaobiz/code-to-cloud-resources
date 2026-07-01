@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> change Event Listener</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:green;
+    font-family:Times New Roman;
+  }
+</style>
+</head>
+<body>
+<!-- Heading and form -->
+  <h1>Choosing a County to visit will trigger change Event Listener</h1>
+  <form>
+    <label for="myCountyChoice"> Select a Transaction: </label>
+    <select id="myCountyChoice">
+      <option value="Kerry">County Kerry</option>
+      <option value="Donegal">County Donegal</option>
+      <option value="Dublin">County Dublin</option>
+      <option value="Cork">County Cork</option>
+    </select>
+  </form>
+</body>
+<script>
+  //change Event Listener
+  // below shows to different ways to code the Event Listener
+  //this first one separates getElementByID() from the addEventListener method
+  //let choice = document.getElementById("myCountyChoice");
+  //choice.addEventListener("change", choiceChange);
+  //The second combines the two into one statement
+  document.getElementById("myCountyChoice").addEventListener("change", choiceChange);
+    function choiceChange ()
+       {
+          let choice = document.getElementById("myCountyChoice").value;
+         document.write("You selected to visit: " + choice);
+        }
+</script>
+</html>

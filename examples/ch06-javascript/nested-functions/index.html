@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nested Functions</title>
+<script>
+//This code will find the area using nested functions
+function getLength(length)
+ {
+//Perform area calculation
+  function getWidth(width)
+   {
+        return length * width;
+     }
+  return getWidth(5);
+ }
+//Output the calculated area
+document.write("The calculated area is: " + getLength(10));
+</script>
+</head>
+</html>

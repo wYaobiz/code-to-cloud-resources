@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The DOM document Property</title>
+</head>
+<body>
+  <h1>My Favorite Foods Around the World</h1>
+  <div id="foodList">
+    <ul id = "foodOfWorld">
+         <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+  </div>
+</body>
+<script>
+     //creates a new list element
+    let newli = document.createElement("li");
+    // creates a text node the list element
+    newlielement = document.createTextNode("Ratatouille");
+    // append the new list item to the existing list
+     newli.appendChild(newlielement)
+     document.getElementById("foodOfWorld").appendChild(newli);
+</script>
+</html>

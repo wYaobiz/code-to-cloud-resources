@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit Event Listener</title>
+<style>
+    input{
+      background-color:lightyellow;
+                color:blue;
+  }
+</style>
+</head>
+<body>
+<form id = "submitForm">
+Enter your name: <input type = "text" id = "Name">
+<br>
+<input type="submit" value="Click to submit">
+</form>
+</body>
+<script>
+  //submit Event Listener
+document.getElementById("submitForm").addEventListener("submit", function (e){
+alert ("The name entered is: " + document.getElementById("Name").value);
+});
+ </script>
+</html>

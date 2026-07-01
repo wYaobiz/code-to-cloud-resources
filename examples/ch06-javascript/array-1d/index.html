@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>One Dimensional Array </title>
+<!-- Styling for table elements -->
+<style>
+table, th, td
+ {
+  border: 2px solid black;
+  border-collapse: collapse;
+ }
+  table{width:100%;}
+td
+ {
+  background-color:wheat;
+  text-align: center;
+  width:10%;
+ }
+th
+  {
+  background-color:burlywood;
+  font-weight: bold;
+  text-align: center;
+  width:10%
+   }
+</style>
+</head>
+<body>
+<!-- Display array elements and indexes -->
+<table style="width:50%;">
+<tr>
+    <th>ARRAY VALUES</th>
+ <script>
+//Create a one dimensional - indexed array
+  pet = ["dog", "cat", "fish", "bird", "lizard", "hamster", "guinea pig"];
+ for (var i = 0; i < pet.length; i++) {
+      document.write("<td>" + pet[i] + "</td>");
+    }
+    document.write("<br>");
+  document.write( "<tr>");
+  document.write("<th>INDEX VALUES:</th>");
+ for (var i = 0; i < pet.length; i++)
+   {
+    document.write("<td>" + i + "</td>");
+   }
+ document.write("</tr>");
+ </script>
+</tr>
+</table>
+</body>
+</html>

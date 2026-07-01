@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover and onmouseout Handlers</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<!-- Heading and unordered list. Call to onmouseover and onmouseout Handlers -->
+  <h1 id = "listHeading" onmouseover = "myMouseOverEvent();" onmouseout = "myMouseOutEvent();" >My Favorite Foods Around the World</h1>
+  <div id="foodList">
+    <ul id = "foodOfWorld">
+         <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+      </div>
+ </body>
+<script>
+//onmouseover and onmouseout Handlers
+ function myMouseOverEvent() {
+     let newHeadingStyle = document.getElementById("listHeading");
+  newHeadingStyle.style.color = "cornflowerblue";
+  newHeadingStyle.style.fontFamily = "Times New Roman";
+ }
+  function myMouseOutEvent() {
+  let newHeadingStyle = document.getElementById("listHeading");
+  newHeadingStyle.style.color = "blue";
+  newHeadingStyle.style.fontFamily = "cursive";
+ }
+</script>
+</html>

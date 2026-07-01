@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The Box Model</title>
+  <!-- Two boxes with the same width and height; the second adds padding.
+       box-sizing: border-box keeps the total size fixed. -->
+  <style>
+    .paranopadding {
+      width: 500px;
+      height: 250px;
+      border: 2px solid coral;
+      box-sizing: border-box;
+    }
+    .parawithpadding {
+      width: 500px;
+      height: 250px;
+      padding: 100px;
+      border: 2px solid blueviolet;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <p>Compare the rendering of two paragraphs</p>
+  <p class="paranopadding">This paragraph has no padding property</p>
+  <p class="parawithpadding">This paragraph has padding property</p>
+</body>
+</html>

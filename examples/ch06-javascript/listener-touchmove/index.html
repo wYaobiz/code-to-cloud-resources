@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>touchmove Event Listener</title>
+<style>
+  h2 {
+    color:blue;
+    fon-family: cursive;
+     }
+  p{
+    color:blueviolet;
+  }
+</style>
+</head>
+<body>
+<h2>See how a touchmove Event works!</h2>
+<p id="touchMoveEvent">Touch this paragraph and then move your finger and the touchmove() event will trigger.</p>
+</body>
+<script>
+  //click Event Listener
+   document.getElementById("touchMoveEvent").addEventListener("touchmove", function(e){
+    document.getElementById("touchMoveEvent").innerHTML = "Welcome to Web Development";
+});
+</script>
+</html>

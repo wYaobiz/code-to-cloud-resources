@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope Local</title>
+<script>
+var lastname = "Kennedy";
+if (lastname == "Kennedy");
+The keyword let creates a local variable in the if block
+  {       let name = "John";
+The keyword var creates a global variable in the if block
+      var middle = "Fitzgearld";
+      alert("Last Name matches Kennedy so " + name + " " + middle + " " + lastname + " is printed");
+  }
+alert(" The variable name " + name + "is out of scope since it is defined with let. Therefore the value for name is undefined and not printed, but the variable middle is in scope since it is defined with var and the middle name " + middle + "  " + lastname + " are printed");
+</script>
+</head>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Newer Selection Methods</title>
+</head>
+<body>
+  <h1>My Favorite Foods Around the World</h1>
+  <div id="foodList">
+     <ul class = "foodOfWorld">
+          <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+    </div>
+</body>
+<script>
+ let listSelector = document.querySelector("#foodList ul");
+ let divSelector= document.querySelector("h1");
+ let listitemsSelector = document.querySelectorAll("#foodList .foodOfWorld li");
+ console.log(listSelector);
+ console.log(divSelector);
+ console.log(listitemsSelector);
+</script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>id selectors </title>
+
+<style>
+
+<!-- Class Selectors and ID Selectors for the various page elements -->
+
+div
+
+   {
+
+   width: 150px;   height: 100px;
+
+ }
+
+.heading
+
+{
+
+ color:blue;
+
+ font-weight:bold;
+
+ font-family:cursive;
+
+}
+
+.ireland
+
+{
+
+ color:green;
+
+}
+
+.spain
+
+{
+
+ color:goldenrod;
+
+}
+
+.italy
+
+{
+
+ color:red;
+
+}
+
+#irelandlist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: green;
+
+  }
+
+ #spainlist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: goldenrod;
+
+  }
+
+ #italylist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: red;
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<!--Create a heading that is styled to be blue in color bold in face type and cursive -->
+
+<h1 class = "heading">Countries To Visit</h1>
+
+<!--Create an unordered list that will consist of three nested unordered lists.  Each list uses a class selector and an id selector -->
+
+<ul>
+
+<div>
+
+  <li class = "ireland">Ireland</li>
+
+<ul id = "irelandlist">
+
+    <li> Dublin</li>
+
+    <li> Donegal</li>
+
+     <li> Dingle</li>
+
+</ul>
+
+  <li class="spain">Spain</li>
+
+<ul id = "spainlist">
+
+    <li> Valencia</li>
+
+    <li> Madrid</li>
+
+    <li> Barcelona</li>
+
+</ul>
+
+  <li class="italy">Italy</li>
+
+<ul id = "italylist">
+
+    <li> Rome</li>
+
+    <li> Florence</li>
+
+     <li> Venice</li>
+
+</ul>
+
+</div>
+
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus Event Listener</title>
+</head>
+<body>
+<!-- Heading and form -->
+  Country to visit: <input type = "text" id = "country"/>
+</body>
+<script>
+  //focus Event Listener
+  // below shows to different ways to code the Event Listener
+  //this first one separates getElementByID() from the addEventListener method
+  //let chosenCountry = document.getElementById("country");
+  // chosenCountry.addEventListener("focus", choiceCountry);
+//The second combines the two into one statement
+   document.getElementById("country").addEventListener("focus", choiceCountry);
+   function choiceCountry ()
+     {
+     country.style.borderColor = "blueviolet";
+     country.style.background = "cornflowerblue";
+     let Country = document.getElementById('country');
+       Country.value = 'France';
+     }
+</script>
+</html>

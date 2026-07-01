@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select Event Listener</title>
+<style>
+    input{
+     background-color:lightyellow;
+     color:blue;
+  }
+</style>
+</head>
+<body>
+<form>
+<input type="text" value="Please select me!" id = "selectText">
+</form>
+</body>
+<script>
+  //select Event Listener
+document.getElementById("selectText").addEventListener("select", function (e){
+document.write(document.getElementById("selectText").innerHTML = "You SELECTED the button and triggered the select event!!!");
+});
+ </script>
+</html>
