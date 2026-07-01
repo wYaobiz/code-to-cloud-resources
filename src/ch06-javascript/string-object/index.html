@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String Object</title>
+<script>
+var str = "Mrs. Green lives in a lush green valley in Greenland.";
+var placeValue = str.search(/green/i);
+if (placeValue)
+ {
+   alert("The word green appears in position " + placeValue + " in the string");
+ }
+else
+ {
+    alert("The word green does not appear in the string");
+ }
+</script>
+Produces
+  Example code using RegEx object (case sensitive)
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope</title>
+<script>
+let str = "Mrs. Redford lives in a bright red house in Red Bank.";
+let pattern = /red/i;
+let result = str.match(pattern);
+if (result)
+  {
+    alert("The pattern matches the inputted word " + result);
+}
+else
+  {
+    alert("The pattern does not match");
+  }
+</script>
+</head>
+</html>
+  Example code using RegEx object (not case sensitive)
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope</title>
+<script>
+let str = "Mrs. Redford lives in a bright red house in Red Bank.";
+let pattern = /red/;
+let result = str.match(pattern);
+if (result)
+  {
+    alert("The pattern matches the inputted word " + result);
+}
+else
+  {
+    alert("The pattern does not match");
+  }
+</script>
+</head>
+</html>
+The alert will not skip over the red found in Redford
+  Example code using modifiers associated with the RegExp object :case insensitive and global searches
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scope</title>
+<script>
+let str = "Mrs. Redford lives in a bright red house in Red Bank.";
+let pattern = /red/gi;
+let result = str.match(pattern);
+if (result)
+  {
+    alert("The pattern matches the inputted word " + result);
+}
+else
+  {
+    alert("The pattern does not match");
+  }
+</script>
+</head>
+</html>
+Using g modifier we can see all matches are found
+  Example code of JS output function
+The alert() method
+display a popup window/dialog box
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>alert() method</title>
+</head>
+<!-- onload event will execute the script called displayWelcomeMessage() immediately after the page is loaded -->
+<body onload = "displayWelcomeMessage()">
+<script>
+function displayWelcomeMessage()
+  {
+   alert("Welcome to Web Development");
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Objects</title>
+<script>
+// Constructor function for PetInfo object
+  function PetInfo(owner, pettype, petname, petbirthdate) {
+  this.owner = owner;
+  this.pettype = pettype;
+  this.petname = petname;
+  this.petbirthdate = petbirthdate;
+}
+// Add a method to the Prototype property which calculates the age of the pet
+PetInfo.prototype.calculateBirthDate= function(){
+      const todaysdate = new Date();
+      let currentyear = todaysdate.getFullYear();
+      console.log('The age of the pet  is: '+(currentyear - this.petbirthdate));
+}
+// Add a prototype property called breed
+PetInfo.prototype.breed = "Maltese";
+// Create a PetInfo object
+var petinfo1 = new PetInfo("Maria", "dog", "Murphy", 2020);
+console.log("The Name of the Owner is " + petinfo1.owner + ". The pet type is " + petinfo1.pettype + " and the pet's name is  " + petinfo1.petname + " and the breed is " + petinfo1.breed + ".");
+petinfo1.calculateBirthDate();
+// Create a second PetInfo object
+PetInfo.prototype.breed = "Jack Russell Terrier";
+var petinfo2 = new PetInfo("John", "dog", "Jackie", 2016);
+console.log("The Name of the Owner is " + petinfo2.owner + ". The pet type is " + petinfo2.pettype + " and the pet's name is  " + petinfo2.petname + " and the breed is " + petinfo2.breed + ".");
+petinfo2.calculateBirthDate();
+</script>
+</head>
+</html>

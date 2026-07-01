@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function Expressions</title>
+</head>
+ <script>
+//Function Expression definition
+var finalCostOfTickets = function
+costOfTickets(priceOfTicket, numberOfTickets)
+ {
+  document.write("The total cost for " + numberOfTickets + " tickets costing $" + priceOfTicket + " is: $" + priceOfTicket * numberOfTickets );
+  // this code will return the value of the cost for tickets
+  return priceOfTicket * numberOfTickets;
+ }
+//Invoke the function expression
+let totalTicketCost = finalCostOfTickets(15,10);
+</script>
+<body>
+<!-- HTML form to load the JS script -->
+<form action="" onload = "finalCostOfTickets()">
+</form>
+</body>
+</html>

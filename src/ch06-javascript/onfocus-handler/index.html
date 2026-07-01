@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onfocus Handler</title>
+</head>
+<body>
+<!-- Heading and form -->
+  Enter a country you would like to visit: <input type = "text" id = "country"  onfocus = "countryToVisit();"/>
+</body>
+<script>
+ //onfocus Handler
+  function countryToVisit() {
+    country.style.borderColor = "blueviolet";
+    country.style.background = "cornflowerblue";
+   let Country = document.getElementById('country');
+      Country.value = 'France';
+ }
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mousemove Event Listener</title>
+</head>
+<body>
+    <input type = "button" style = "backgroundcolor = green" id = "mybutton" value = "Hover over me "/>
+</body>
+<script>
+  //mousemove Event Listener
+  document.getElementById("mybutton").addEventListener("mousemove", function(e)
+ {
+  let x = e.clientX;
+  let y = e.clientY;
+  let coordinates = "Coordinates: (" + x + "," + y + ")";
+  console.log(document.getElementById("mybutton").innerHTML = coordinates);
+    });
+</script>
+</html
+Produces
+Before the mousemove event occurs.
+No coordinates for the mouse pointer are displayed.
+After the mousemove event occurs.
+The coordinates for the mouse pointer are displayed.
+Example code of a keydown event.
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>keydown Event Listener</title>
+<style>
+  h2 {
+    color:blue
+     }
+  input{
+    background-color:lightyellow;
+  }
+</style>
+</head>
+<body>
+    <h2>Click the text box, press any key and see what happens</h2>
+    <input type = "button" id = "mybutton" value = "Press down on the text box "/>
+</body>
+<script>
+  //keydown Event Listener
+     document.getElementById("mybutton").addEventListener('keydown', function (e){
+      mybutton.style.backgroundColor="cornflowerblue";
+    document.getElementById("mybutton").value = "Key was pressed and keydown event triggered";
+        });
+</script>
+</html>

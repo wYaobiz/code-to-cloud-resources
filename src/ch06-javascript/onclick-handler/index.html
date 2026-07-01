@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onclick Handler</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<!-- Heading and unordered list -->
+<h1 id = "listHeading">My Favorite Foods Around the World</h1>
+       <div id="foodList">
+          <ul id = "foodOfWorld">
+               <li> Kibbeh </li>
+               <li> Irish Soda Bread </li>
+               <li> Lasagna</li>
+               <li> Paella</li>
+               <li> Pad Thai</li>
+               <li> Tandoori</li>
+         </ul>
+       <br>
+     <button onclick="myonClickFunction()">Click me to Change Heading Element Styling</button>
+   </div>
+</body>
+<script>
+//onclick Handler
+ function myonClickFunction() {
+  let newHeadingStyle = document.getElementById("listHeading");
+  newHeadingStyle.style.color = "cornflowerblue";
+  newHeadingStyle.style.fontFamily = "Times New Roman";
+ }
+</script>
+</html>

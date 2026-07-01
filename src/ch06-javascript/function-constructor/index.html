@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Function Constructor</title>
+<script>
+// Function constructor to create a new Movie object and print out the Object’s content
+function Movie(movieName, leadMaleCharacter, leadFemaleCharacter) {
+  this.movieName = movieName;
+  this.leadMaleCharacter = leadMaleCharacter;
+   this.leadFemaleCharacter = leadFemaleCharacter;
+   this.movieInformation = function() {
+    return "Movie name is: " + this.movieName + " The Lead Male Character is: " + this.leadMaleCharacter + " and the Lead Female Character is: "  + this.leadFemaleCharacter;
+  }
+}
+ //Create a new movie object
+const movie1 = new Movie("Harry Potter", "Harry", "Hermoine");
+//Print out the Object’s Information
+document.write (movie1.movieInformation());
+</script>
+</head>
+</html>

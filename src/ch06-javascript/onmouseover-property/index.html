@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover and onmouseout Handlers</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<!-- Heading and unordered list -->
+  <h1 id = "listHeading">My Favorite Foods Around the World</h1>
+  <div id="foodList">
+    <ul id = "foodOfWorld">
+         <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+      </div>
+ </body>
+<script>
+//onmouseover and onmouseout Event Property Approach
+ let newHeadingStyle = document.getElementById("listHeading");
+ newHeadingStyle.onmouseover = function () {
+  newHeadingStyle.style.color = "cornflowerblue";
+  newHeadingStyle.style.fontFamily = "Times New Roman";
+ }
+ let oldHeadingStyle = document.getElementById("listHeading");
+ oldHeadingStyle.onmouseout = function () {
+  oldHeadingStyle.style.color = "blue";
+  oldHeadingStyle.style.fontFamily = "cursive";
+ }
+ </script>
+</html>
+INITIAL HTML PAGE (ONMOUSEOUT HANDLER REVERTS BACK TO THIS PAGE)
+onmouseout EVENT will change the Heading text to Times New cursive and text color back to blue
+PAGE AFTER ONMOUSOVER HANDLER
+onmouseover EVENT will change the Heading text to Times New Roman and text color back to cornflower blue
+Example Code Using Event Listener Approach
+- An example of window load Event Listener.
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window.load Event Handler</title>
+</head>
+<body>
+  <h1 style = "color:blue;  font-family:cursive;">My Favorite Foods Around the World</h1>
+  <div id="foodList">
+     <ul style = "color:blueviolet;  font-weight:bold;" id = "foodOfWorld">
+         <li> Kibbeh </li>
+         <li> Irish Soda Bread </li>
+         <li> Lasagna</li>
+         <li> Paella</li>
+        <li> Pad Thai</li>
+        <li> Tandoori</li>
+   </ul>
+</div>
+</body>
+<script>
+   //window load Event Listener
+  // below shows to different ways to code the Event Listener
+  //first method
+    /* window.addEventListener("load", pageLoaded)
+    function pageLoaded() {
+ // console.log("The page for My Favorite Foods Around the World has been loaded'");
+}*/
+  //second method
+   window.addEventListener("load", function()
+    {
+       console.log("The page for My Favorite Foods Around the World has been loaded'");
+    });
+</script>
+</html>

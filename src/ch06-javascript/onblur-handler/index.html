@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onblur Handler</title>
+</head>
+<body>
+<!-- Heading and form -->
+  Enter a country you would like to visit: <input type = "text" id = "country"  onblur = "countryToVisit();"/>
+</body>
+<script>
+ //onblur Handler
+  function countryToVisit() {
+    country.style.borderColor = "darkred";
+    country.style.background = "red";
+   let Country = document.getElementById('country');
+      Country.value = 'Lebanon';
+ }
+</script>
+</html>

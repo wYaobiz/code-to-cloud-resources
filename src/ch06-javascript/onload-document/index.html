@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document.onload Handler</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<!-- Heading and unordered list -->
+<h1>My Favorite Foods Around the World</h1>
+<div id="foodList">
+   <ul id = "foodOfWorld">
+         <li> Kibbeh </li>
+          <li> Irish Soda Bread </li>
+           <li> Lasagna</li>
+           <li> Paella</li>
+            <li> Pad Thai</li>
+            <li> Tandoori</li>
+   </ul>
+</div>
+</body>
+<script>
+//document onload Handler
+ document.body.onload = function() {
+   console.log('The DOM for the page of My Favorite Foods Around the World has been loaded');
+};
+</script>
+</html>
