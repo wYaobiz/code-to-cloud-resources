@@ -520,6 +520,12 @@ echo "</table>";
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/ifnull-function/index.php){ .md-button }
 
+## The Sample Table
+
+The mysqli and PDO examples below all query the same `Pets` table, shown here so you can follow what each query returns.
+
+<img src="../../examples/ch10-php-mysql/_shared/pets-table.png" alt="The Pets table" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 ## Working with mysqli
 
 ### mysqli_num_rows()
@@ -574,6 +580,11 @@ mysqli_close($con);
 
 **Produces:** a line reporting how many rows the query found in the table, or a message if none were counted.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-num-rows/output.png" alt="Output of mysqli-num-rows" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-num-rows/index.php){ .md-button }
 
 ### mysqli_fetch_assoc()
@@ -622,6 +633,11 @@ mysqli_close($connect);
 ```
 
 **Produces:** each pet's owner and name printed in turn, with the values read by column name.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-fetch-assoc/output.png" alt="Output of mysqli-fetch-assoc" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-assoc/index.php){ .md-button }
 
@@ -672,6 +688,11 @@ mysqli_close($con);
 
 **Produces:** each row's values printed as the loop moves through the result set.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-fetch-array/output.png" alt="Output of mysqli-fetch-array" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array/index.php){ .md-button }
 
 ### mysqli_fetch_array() with MYSQLI_NUM
@@ -720,6 +741,11 @@ mysqli_close($con);
 ```
 
 **Produces:** each row printed using numeric positions, giving the same values through index numbers instead of column names.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-fetch-array-num/output.png" alt="Output of mysqli-fetch-array-num" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array-num/index.php){ .md-button }
 
@@ -773,6 +799,11 @@ nnect);
 
 **Produces:** each row printed using column names, matching the output of mysqli_fetch_assoc().
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-fetch-array-assoc/output.png" alt="Output of mysqli-fetch-array-assoc" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array-assoc/index.php){ .md-button }
 
 ### mysqli_fetch_row()
@@ -821,6 +852,11 @@ mysqli_close($con);
 ```
 
 **Produces:** each row printed by position, with values reached through numeric indexes.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/mysqli-fetch-row/output.png" alt="Output of mysqli-fetch-row" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-row/index.php){ .md-button }
 
@@ -887,6 +923,11 @@ $connect=null;
 
 **Produces:** each pet's owner and name printed as the loop reads through the result set.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/pdo-fetch-default/output.png" alt="Output of pdo-fetch-default" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-default/index.php){ .md-button }
 
 ### PDO fetch() with FETCH_ASSOC
@@ -949,6 +990,11 @@ $connect=null;
 ```
 
 **Produces:** each row printed using column names.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/pdo-fetch-assoc/output.png" alt="Output of pdo-fetch-assoc" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-assoc/index.php){ .md-button }
 
@@ -1013,6 +1059,11 @@ $connect=null;
 
 **Produces:** each row printed using numeric positions.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/pdo-fetch-num/output.png" alt="Output of pdo-fetch-num" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-num/index.php){ .md-button }
 
 ### PDO fetch() with FETCH_BOTH
@@ -1075,6 +1126,11 @@ $connect=null;
 ```
 
 **Produces:** each row printed showing that the values can be reached either way.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/pdo-fetch-both/output.png" alt="Output of pdo-fetch-both" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-both/index.php){ .md-button }
 
