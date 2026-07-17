@@ -519,3 +519,562 @@ echo "</table>";
 **Produces:** a table where any NULL value is replaced by the supplied default, and other values appear unchanged.
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/ifnull-function/index.php){ .md-button }
+
+## Working with mysqli
+
+### mysqli_num_rows()
+
+Runs a SELECT against the `Pets` table and counts the rows returned.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_rows</title>
+</head>
+<?php
+// File that includes information such as host server name, username, database name and //password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+   //Find the number of rows retrieved
+   $row = mysqli_num_rows($petresults);
+   //Print out the numbers of rows in the table
+   if($row)
+     {
+       echo("Number of rows in the table : " . $row);
+     }
+     else
+  {
+   //Message printed if no rows found
+   echo "No rows counted";
+  }
+}
+else
+ {
+    //Message printed query does not work
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($con);
+?>
+</html>
+```
+
+**Produces:** a line reporting how many rows the query found in the table, or a message if none were counted.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-num-rows/index.php){ .md-button }
+
+### mysqli_fetch_assoc()
+
+Loops through the result set, reading each row as an associative array so columns are reached by name.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_assoc</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and //password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+   //Loop through result set using mysqli_fetch_array(MYSQLI_ASSOC)
+   while ($row = mysqli_fetch_assoc($petresults))
+    {
+     echo "<h4>Owner     Pet Name</h4>";
+    //print the first and third elements
+    echo $row["Owner"]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row["PetName"];
+    echo "<br>";
+  }
+}
+else
+ {
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($connect);
+?>
+</html>
+```
+
+**Produces:** each pet's owner and name printed in turn, with the values read by column name.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-assoc/index.php){ .md-button }
+
+### mysqli_fetch_array()
+
+Reads each row with the default behavior of mysqli_fetch_array().
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and //password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+  //Loop through result set using mysqli_fetch_array
+  while($row = mysqli_fetch_array($petresults))
+  {
+  echo "<h4>Owner     Pet Type</h4>";
+    //print the first and second elements
+    echo $row["Owner"]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row[1];
+    echo "<br>";
+  }
+}
+else
+ {
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($con);
+?>
+</html>
+```
+
+**Produces:** each row's values printed as the loop moves through the result set.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array/index.php){ .md-button }
+
+### mysqli_fetch_array() with MYSQLI_NUM
+
+Passes MYSQLI_NUM so each row comes back indexed by position rather than by name.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and //password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+  //Loop through result set using mysqli_fetch_array(MYSQLI_NUM)
+  while($row = mysqli_fetch_array($petresults, MYSQLI_NUM))
+    {
+     echo "<h4>Owner     Pet Name</h4>";
+    //print the first and third elements
+    echo $row[0]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row[2];
+    echo "<br>";
+  }
+}
+else
+ {
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($con);
+?>
+</html>
+```
+
+**Produces:** each row printed using numeric positions, giving the same values through index numbers instead of column names.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array-num/index.php){ .md-button }
+
+### mysqli_fetch_array() with MYSQLI_ASSOC
+
+Passes MYSQLI_ASSOC so each row comes back keyed by column name.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+   //Loop through result set using mysqli_fetch_array(MYSQLI_ASSOC)
+  while($row = mysqli_fetch_array($petresults, MYSQLI_ASSOC))
+    {
+     echo "<h4>Owner     Pet Name</h4>";
+    //print the first and third elements
+    echo $row["Owner"]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row["PetName"];
+    echo "<br>";
+  }
+}
+else
+ {
+  //Output when query fails with error message
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($con);
+?>
+nnect);
+?>
+</html>
+```
+
+**Produces:** each row printed using column names, matching the output of mysqli_fetch_assoc().
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-array-assoc/index.php){ .md-button }
+
+### mysqli_fetch_row()
+
+Reads each row as a numerically indexed array.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Connect to the MySqL server
+if (mysqli_connect_errno())
+  {
+     echo "Failed to $con to MySQL: " . mysqli_connect_error();
+  }
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$query = "SELECT * FROM Pets";
+// Execute the SELECT query
+ $petresults = mysqli_query($con, $query);
+// Check if the query yielded a result set
+if($petresults)
+ {
+   //Loop through result set using mysqli_fetch_row
+   while ($row = mysqli_fetch_row($petresults))
+    {
+     echo "<h4>Pet Type    Owner</h4>";
+    //print the first and third elements
+    echo $row[1]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". " &nbsp". " &nbsp" . $row[0];
+    echo "<br>";
+  }
+}
+else
+ {
+     echo "Query Failed :" . mysqli_error($con);
+ }
+// Close the DB connection
+mysqli_close($con);
+?>
+</html>
+```
+
+**Produces:** each row printed by position, with values reached through numeric indexes.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/mysqli-fetch-row/index.php){ .md-button }
+
+## Working with PDO
+
+### PDO fetch() with the default mode
+
+Connects with PDO inside a try/catch block and reads rows using fetch() with the default mode.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Try catch block to catch connection errors
+try
+  {
+    // Connect to your DB
+    $connect = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+       }
+catch(PDOException $e)
+      {
+        echo "Connection failed: " . $e->getMessage();
+      }
+//Try catch block to catch SQL errors
+try
+  {
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$petquery="SELECT * FROM Pets";
+// Execute the SELECT query
+$petresults = $connect->query($petquery);
+// Check if the SELECT query yielded a result set
+if ($petresults)
+ {
+  //Loop through result set using fetch(PDO::FETCH_ASSOC)
+    while($row = $petresults-> fetch())
+  {
+  echo "<h4>Owner     Pet Name</h4>";
+  //print the first and second elements
+  echo $row[0]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row[1];
+  echo "<br>";
+  }
+}
+}
+//Catch block to catch errors
+catch(PDOException $error)
+  {
+    echo "<br><br>";
+  echo "Query Statement failed: " . $error->getMessage();
+  }
+// Close the DB connection
+$connect=null;
+?>
+</html>
+```
+
+**Produces:** each pet's owner and name printed as the loop reads through the result set.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-default/index.php){ .md-button }
+
+### PDO fetch() with FETCH_ASSOC
+
+Sets PDO::FETCH_ASSOC so rows come back keyed by column name.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Try catch block to catch connection errors
+try
+  {
+    // Connect to your DB
+    $connect = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+       }
+catch(PDOException $e)
+      {
+        echo "Connection failed: " . $e->getMessage();
+      }
+//Try catch block to catch SQL errors
+try
+  {
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$petquery="SELECT * FROM Pets";
+// Execute the SELECT query
+$petresults = $connect->query($petquery);
+// Check if the SELECT query yielded a result set
+if ($petresults)
+ {
+  //Loop through result set using fetch(PDO::FETCH_ASSOC)
+    while($row = $petresults-> fetch(PDO::FETCH_ASSOC))
+  {
+  echo "<h4>Owner     Pet Name</h4>";
+  //print the first and third elements
+  echo $row["Owner"]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row["PetName"];
+    echo "<br>";
+  }
+}
+}
+//Catch block to catch errors
+catch(PDOException $error)
+  {
+    echo "<br><br>";
+  echo "Query Statement failed: " . $error->getMessage();
+  }
+// Close the DB connection
+$connect=null;
+?>
+</html>
+```
+
+**Produces:** each row printed using column names.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-assoc/index.php){ .md-button }
+
+### PDO fetch() with FETCH_NUM
+
+Sets PDO::FETCH_NUM so rows come back indexed by position.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Try catch block to catch connection errors
+try
+  {
+    // Connect to your DB
+    $connect = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+       }
+catch(PDOException $e)
+      {
+        echo "Connection failed: " . $e->getMessage();
+      }
+//Try catch block to catch SQL errors
+try
+  {
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$petquery="SELECT * FROM Pets";
+// Execute the SELECT query
+$petresults = $connect->query($petquery);
+// Check if the SELECT query yielded a result set
+if ($petresults)
+ {
+  //Loop through result set using fetch(PDO::FETCH_NUM)
+     while($row = $petresults-> fetch(PDO::FETCH_NUM))
+  {
+     echo "<h4>Owner     Pet Name</h4>";
+     //print the first and third elements
+    echo $row[0]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row[2];
+    echo "<br>";
+  }
+}
+}
+//Catch block to catch errors
+catch(PDOException $error)
+  {
+    echo "<br><br>";
+  echo "Query Statement failed: " . $error->getMessage();
+  }
+// Close the DB connection
+$connect=null;
+?>
+</html>
+```
+
+**Produces:** each row printed using numeric positions.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-num/index.php){ .md-button }
+
+### PDO fetch() with FETCH_BOTH
+
+Sets PDO::FETCH_BOTH so each row is available both by column name and by position.
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> mysqli function mysqli_num_fetch_array(MYSQLI_NUM)</title>
+</head>
+<?php
+// File that includes information such as host server, username, data base name and password needed to connect to the database server
+include('connect.php');
+//Try catch block to catch connection errors
+try
+  {
+    // Connect to your DB
+    $connect = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+       }
+catch(PDOException $e)
+      {
+        echo "Connection failed: " . $e->getMessage();
+      }
+//Try catch block to catch SQL errors
+try
+  {
+// Create a SELECT query that retrieves all the records from a DB table called Pets
+$petquery="SELECT * FROM Pets";
+// Execute the SELECT query
+$petresults = $connect->query($petquery);
+// Check if the SELECT query yielded a result set
+if ($petresults)
+ {
+  //Loop through result set using fetch(PDO::FETCH_BOTH)
+  while($row = $petresults-> fetch(PDO::FETCH_BOTH))
+  {
+  echo "<h4>Owner     Pet Type</h4>";
+  //print the first and second elements
+  echo $row["Owner"]."&nbsp". "&nbsp ". "&nbsp ". " &nbsp". "&nbsp ". $row["1"];
+    echo "<br>";
+  }
+}
+}
+//Catch block to catch errors
+catch(PDOException $error)
+  {
+    echo "<br><br>";
+  echo "Query Statement failed: " . $error->getMessage();
+  }
+// Close the DB connection
+$connect=null;
+?>
+</html>
+```
+
+**Produces:** each row printed showing that the values can be reached either way.
+
+[View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/pdo-fetch-both/index.php){ .md-button }
+
