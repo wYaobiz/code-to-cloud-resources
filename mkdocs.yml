@@ -78,6 +78,7 @@ nav:
       - "HTML Code Examples": code/ch03-html.md
       - "CSS Code Examples": code/ch05-css.md
       - "JavaScript Code Examples": code/ch06-javascript.md
+      - "Security Examples": code/ch07-security.md
       - "PHP Code Examples": code/ch08-php.md
       - "PHP and MySQL Code Examples": code/ch10-php-mysql.md
       - "Web Server and DevOps Examples": code/ch11-devops.md

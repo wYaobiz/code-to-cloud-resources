@@ -1,0 +1,19 @@
+# Place this as .htaccess inside the upload directory when the files must
+# live under the web root.
+#
+# Even with type checks, a file that reaches an executable directory is a
+# risk. These directives stop the server from running anything there.
+
+# Do not hand any file in this directory to a script interpreter
+php_flag engine off
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .phps
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .phps
+
+# Serve only the file types this directory is meant to hold
+<FilesMatch "\.(jpg|jpeg|png|gif)$">
+    Require all granted
+</FilesMatch>
+
+<FilesMatch "\.(?!jpg|jpeg|png|gif$)">
+    Require all denied
+</FilesMatch>
