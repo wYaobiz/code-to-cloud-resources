@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>pseudo-element selectors </title>
+
+<!-- pseudo element Selectors for the various page elements -->
+
+<style>
+
+ h1::first-letter {
+
+     color:blueviolet;
+
+ font-weight:bold;
+
+ font-family:Snell Roundhand;
+
+ font-size: 2em;
+
+        }
+
+ h1::after
+
+{
+
+  content: url("   Flags.png");
+
+}
+
+ p::first-line
+
+{
+
+  color : mediumorchid;
+
+  font-family: American Typewriter;
+
+  font-weight:bold;
+
+}
+
+input::placeholder {
+
+            color: mediumvioletred;
+
+            font-style: italic;
+
+        }
+
+li::marker {
+
+            color: crimson;
+
+            font-size: 1.5em;
+
+        }
+
+::selection {
+
+            color: darkorange;
+
+            background-color: yellow;
+
+        }
+
+ p::before {
+
+            content: "Please read Carefully: ";
+
+            color: darkorange;
+
+.heading
+
+{
+
+ color:Cornflowerblue;
+
+ font-weight:bold;
+
+  font-family:cursive;
+
+}
+
+.ireland
+
+{
+
+ color:green;
+
+}
+
+.spain
+
+{
+
+ color:goldenrod;
+
+}
+
+.italy
+
+{
+
+ color:red;
+
+}
+
+#irelandlist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: green;
+
+  }
+
+ #spainlist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: goldenrod;
+
+  }
+
+ #italylist
+
+  {
+
+    font-family: Arial;
+
+    font-style: italic;
+
+    color: red;
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<!--Create a heading that is styled to be blue in color bold in face type and cursive -->
+
+<h1 class ="heading">Countries To Visit   </h1>
+
+<!--Create an unordered list that will consist of three nested unordered lists.  -->
+
+<p>Below is a list of different countries and cities to visit <br>
+
+   If you do not see a country you like type in a country name below
+
+</p>
+
+<input type = "text" placeholder = "Enter the name of a country"
+
+<br>
+
+<ul>
+
+ <div>
+
+  <li class = "ireland">Ireland</li>
+
+    <ul id = "irelandlist">
+
+      <li>Dublin</li>
+
+      <li>Donegal</li>
+
+      <li>Dingle</li>
+
+    </ul>
+
+  <li class="spain">Spain</li>
+
+    <ul id = "spainlist">
+
+       <li>Valencia</li>
+
+       <li>Madrid</li>
+
+       <li>Barcelona</li>
+
+    </ul>
+
+  <li class="italy">Italy</li>
+
+    <ul id = "italylist" >
+
+       <li>Rome</li>
+
+       <li>Florence</li>
+
+       <li>Venice</li>
+
+    </ul>
+
+</div>
+
+</ul>
+
+</body>
+
+</html>

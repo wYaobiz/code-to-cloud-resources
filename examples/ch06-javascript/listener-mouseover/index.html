@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mouseover and mouseout Event Listener</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+  <h1 id = "listHeading">My Favorite Foods Around the World</h1>
+  <div id="foodList">
+    <ul id = "foodOfWorld">
+         <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+      </div>
+ </body>
+<script>
+   //mouseover and mouseout Event Listener
+  // below shows to different ways to code the Event Listener
+  //this first one separates getElementByID() from the addEventListener method
+  //let newHeadingStyle = document.getElementById("listHeading");
+  //newHeadingStyle.addEventListener("mouseover", changeNewHeading);
+   //The second combines the two into one statement
+     document.getElementById("listHeading").addEventListener("mouseover", changeNewHeading);
+     function changeNewHeading ()
+      {
+      listHeading.style.color = "cornflowerblue";
+      listHeading.style.fontFamily = "Times New Roman";
+      }
+  //let oldHeadingStyle = document.getElementById("listHeading");
+  //oldHeadingStyle.addEventListener("mouseout", changeOldHeading);
+  //The second combines the two into one statement
+     document.getElementById("listHeading").addEventListener("mouseout", changeOldHeading);
+     function changeOldHeading ()
+       {
+      listHeading.style.color = "blue";
+      listHeading.style.fontFamily = "cursive";
+       }
+</script>
+</html>

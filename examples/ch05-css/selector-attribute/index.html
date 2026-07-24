@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>attribute selectors </title>
+
+<!-- Attribute Selectors for the various page elements -->
+
+<style>
+
+  div
+
+   {
+
+      width: 150px;   height: 100px;
+
+  }
+
+  .heading
+
+   {
+
+     color:blue;
+
+     font-weight:bold;
+
+     font-family:cursive;
+
+    }
+
+  .ireland
+
+   {
+
+      color:green;
+
+   }
+
+  .spain
+
+   {
+
+       color:goldenrod;
+
+    }
+
+  .italy
+
+   {
+
+      color:red;
+
+    }
+
+  #irelandlist
+
+   {
+
+     font-family: Arial;
+
+     font-style: italic;
+
+     color: green;
+
+   }
+
+  #spainlist
+
+   {
+
+     font-family: Arial;
+
+     font-style: italic;
+
+     color: goldenrod;
+
+   }
+
+  #italylist
+
+   {
+
+     font-family: Arial;
+
+     font-style: italic;
+
+     color: red;
+
+   }
+
+  [title~="Ireland"]
+
+   {
+
+     border: 5px solid green;
+
+   }
+
+  [title~="Spain"]
+
+   {
+
+     border: 5px solid goldenrod;
+
+   }
+
+  [title~="Italy"]
+
+   {
+
+     border: 5px solid red;
+
+   }
+
+</style>
+
+</head>
+
+<body>
+
+<!--Create a heading that is styled to be blue in color bold in face type and cursive -->
+
+<h1 class = "heading">Countries To Visit</h1>
+
+<!--Create an unordered list that will consist of three nested unordered lists.  -->
+
+<ul>
+
+ <div>
+
+  <li class = "ireland">Ireland</li>
+
+     <ul id = "irelandlist" title = "Ireland">
+
+        <li> Dublin</li>
+
+        <li> Donegal</li>
+
+        <li> Dingle</li>
+
+     </ul>
+
+  <li class="spain">Spain</li>
+
+    <ul id = "spainlist" title = "Spain">
+
+        <li> Valencia</li>
+
+        <li> Madrid</li>
+
+        <li> Barcelona</li>
+
+    </ul>
+
+  <li class="italy">Italy</li>
+
+    <ul id = "italylist" title = "Italy">
+
+        <li> Rome</li>
+
+        <li> Florence</li>
+
+        <li> Venice</li>
+
+     </ul>
+
+</div>
+
+</ul>
+
+</body>
+
+</html>

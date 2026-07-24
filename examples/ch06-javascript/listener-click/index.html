@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>click event Listener</title>
+<!-- styling for HTML elements -->
+<style>
+  h1 {
+    color:blue;
+    font-family:cursive;
+     }
+  li{
+     color:blueviolet;
+     font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<!-- Heading and unordered list -->
+  <h1 id = "listHeading">My Favorite Foods Around the World</h1>
+  <div id="foodList">
+    <ul id = "foodOfWorld">
+                 <li> Kibbeh </li>
+       <li> Irish Soda Bread </li>
+       <li> Lasagna</li>
+       <li> Paella</li>
+       <li> Pad Thai</li>
+       <li> Tandoori</li>
+    </ul>
+    <br>
+    <button id = "buttonclick">Click me to Change Heading Element Styling</button>
+  </div>
+ </body>
+<script>
+  //click Event Listener
+  // below shows to different ways to code the Event Listener
+  //this first one separates getElementByID() from the addEventListener method
+  //let buttonclicked = document.getElementById("buttonclick");
+  // buttonclicked.addEventListener("click", clickEvent);
+  //The second combines the two into one statement
+  document.getElementById("buttonclick").addEventListener("click", clickEvent);
+  function clickEvent() {
+    let newHeadingStyle = document.getElementById("listHeading");
+  newHeadingStyle.style.color = "cornflowerblue";
+  newHeadingStyle.style.fontFamily = "Times New Roman";
+   }
+</script>
+</html>

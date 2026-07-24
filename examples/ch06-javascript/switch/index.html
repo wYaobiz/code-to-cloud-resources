@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch example</title>
+<script>
+//JavaScript that uses a switch statement to determine the movie genre entered
+function getMovieGenre()
+{
+//Retrieve the data entered
+let MovieGenre = document.getElementById("moviegenre").value;
+switch (MovieGenre)
+ {
+//Case statement that determines the movie genre based upon user input
+  case "Drama":
+    movie = "Interstellar";
+    break;
+  case "Horror":
+    movie = "It";
+    break;
+  case "Romance":
+    movie = "Titanic";
+    break;
+  case "Sci-Fi":
+    movie = "Dune";
+    break;
+  default:
+    movie = "Other";
+ }
+ alert(movie);
+}
+</script>
+</head>
+<body>
+<!--Form to enter movie genre data -->
+<form method = "GET" onsubmit="getMovieGenre();">
+  <label for="MovieGenre">Enter a movie genre:</label>
+  <input type="text" id="moviegenre">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

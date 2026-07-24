@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Example</title>
+</head>
+<body>
+  <h1>LOGIN PAGE</h1>
+
+  <!--
+    Create a form with two input fields, a dropdown menu, and a submit button.
+    The action attribute names the PHP script that processes the submitted data.
+    The onsubmit attribute runs a validate() script when the form is submitted.
+  -->
+  <form action="processtransaction.php" method="POST" onsubmit="return validate();">
+    <div>
+      <!-- Input fields for the user name and password -->
+      <label>Username</label>
+      <input type="text" id="username" name="username" />
+      <br><br>
+      <label>Password</label>
+      <input type="password" id="password" name="password" />
+    </div>
+    <br><br>
+    <div>
+      <!-- Transactions that can be chosen by the user -->
+      <label>Transaction</label>
+      <select id="choice" name="choice">
+        <option>Select one of the following</option>
+        <option>Search Your Account(s)</option>
+        <option>Make a Payment</option>
+        <option>Logout</option>
+      </select>
+    </div>
+    <div>
+      <br><br>
+      <input type="submit" value="SUBMIT" />
+    </div>
+  </form>
+</body>
+</html>

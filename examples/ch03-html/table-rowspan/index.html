@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>rowspan Example</title>
+  <!-- Style the table -->
+  <style>
+    th { background-color: lightsteelblue; }
+    td { text-align: center; }
+    td, th { border: thin solid black; }
+  </style>
+</head>
+<body>
+  <!-- Create a table of authors and their books -->
+  <table>
+    <tr>
+      <th>Author Name</th>
+      <td>Beatrix Potter</td>
+    </tr>
+    <tr>
+      <!-- Use the rowspan attribute to have the heading span over two rows -->
+      <th rowspan="2">Title of Book</th>
+      <td>The Tale of Peter Rabbit</td>
+    </tr>
+    <tr>
+      <td>The Tale of Benjamin Bunny</td>
+    </tr>
+    <tr>
+      <th>Author Name</th>
+      <td>A A Milne</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Title of Book</th>
+      <td>Winnie the Pooh</td>
+    </tr>
+    <tr>
+      <td>The House at Pooh Corner</td>
+    </tr>
+    <tr>
+      <th>Author Name</th>
+      <td>Eric Carle</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Title of Book</th>
+      <td>The Very Hungry Caterpillar</td>
+    </tr>
+    <tr>
+      <td>The Busy Spider</td>
+    </tr>
+    <tr>
+      <th>Author Name</th>
+      <td>Marcus Pfister</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Title of Book</th>
+      <td>The Rainbow Fish</td>
+    </tr>
+    <tr>
+      <td>Dazzle the Dinosaur</td>
+    </tr>
+  </table>
+</body>
+</html>

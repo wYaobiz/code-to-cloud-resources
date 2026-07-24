@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for example</title>
+<script>
+//JavaScript that produces a multiplication table based upon the factor entered by the user
+function Multiply()
+{
+//Retrieve the data entered
+let factor = document.getElementById("factor").value;
+counter = 1;
+while(counter <= 12)
+{
+   product = counter * factor;
+     document.write(counter + " multiplied by " +  factor + " = " + product);
+   document.write("<br><br>");
+  counter++;
+ }
+}
+</script>
+</head>
+<body>
+<!--Form to enter factor for multiplication table -->
+<h1 style ="color:green">Learn your Multiplication Tables</h1>
+<form method = "GET" onsubmit="Multiply();">
+ <label for="Mulitplier" style = "color: blue; font-weight:bold;">Enter the factor of the Multiplication table you want to learn:</label>
+  <input type="text" id="factor" >
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Rules of Specificity</title>
+
+<style>
+
+ body{
+
+  font-weight:bold;
+
+  font-family:Lucida, Times New Roman, serif;
+
+  color:cornflowerblue;
+
+ }
+
+ div{
+
+  font-weight:bold;
+
+  color:maroon;
+
+}
+
+ p{
+
+color:blue;
+
+}
+
+#para1{
+
+    font-family: sans-serif, Times New Roman, Arial;
+
+font-weight: bold;
+
+font-size: 12pt;
+
+color:limegreen;
+
+}
+
+.lang{
+
+font-style: italic;
+
+color:red;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <h1>Welcome to Web Applications</h1>
+
+  <div>
+
+       <h2>Front End Languages taught:</h2>
+
+       <p>HTML,CSS, JavaScript</p>
+
+       <p id = "para1">Back End Languages taught:</p>
+
+       <p class = "lang">SQL and PHP</p>
+
+ </div>
+
+</body>
+
+</html>

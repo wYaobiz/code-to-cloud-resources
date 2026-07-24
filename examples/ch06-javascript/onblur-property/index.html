@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onblur Event Property Approach</title>
+</head>
+<body>
+<!-- Heading and form -->
+  Country to visit: <input type = "text" id = "country"/>
+</body>
+<script>
+ //onblur Event Property Approach
+  let countrychosen = document.getElementById("country");
+    countrychosen.onblur = function () {
+    country.style.borderColor = "darkred";
+    country.style.background = "red";
+   let Country = document.getElementById('country');
+      Country.value = 'Lebanon';
+ }
+</script>
+</html>

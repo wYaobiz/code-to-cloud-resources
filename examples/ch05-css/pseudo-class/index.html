@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>pseudo-class selectors </title>
+
+<!-- pseudo-class Selectors -->
+
+<style>
+
+a:link
+
+ {
+
+   color: green;
+
+   text-decoration: underline overline dotted red;
+
+ }
+
+a:visited
+
+ {
+
+   color: magenta;
+
+   text-decoration-color: green;
+
+ }
+
+a:hover
+
+ {
+
+   text-decoration: none;
+
+   color: cyan;
+
+   font-weight: bold;
+
+ }
+
+a: active
+
+ {
+
+   background-color: yellow;
+
+ }
+
+li:first-child
+
+ {
+
+   background-color: green;
+
+ }
+
+li:last-child
+
+ {
+
+   background-color: red;
+
+ }
+
+.image img:only-child
+
+ {
+
+   border: 4px solid goldenrod;
+
+   padding: 10px;
+
+}
+
+input:focus
+
+ {
+
+   border: 2px solid blue;
+
+   background-color: blueviolet;
+
+   color: white;
+
+ }
+
+input[type="radio"]:checked
+
+ {
+
+  box-shadow: 0 0 7px 5px blueviolet;
+
+ }
+
+div
+
+ {
+
+   width: 150px;   height: 100px;
+
+ }
+
+</style>
+
+</head>
+
+<body>
+
+<p> Travel to the country of your dreams! To learn more visit
+
+   <a href="www.ourSite.com">OUR SITE</a> and start your adventure!
+
+</p>
+
+<div class="image">
+
+  <img src="Flags.png" alt="Flags" >
+
+</div>
+
+<div>
+
+  <nav>
+
+    <ul>
+
+       <li><a href="#">Ireland</a></li>
+
+       <li><a href="#">Spain</a></li>
+
+        <li><a href="#">Italy</a></li>
+
+    </ul>
+
+  </nav>
+
+</div>
+
+<p>If you did not find a country listed above then perhaps choose one from below </p>
+
+England <input type="radio" name = "destination">
+
+France <input type = "radio" name = "destination">
+
+Greece <input type="radio" name = "destination">
+
+Germany <input type = "radio" name = "destination">
+
+<p>Otherwise type the name of the country you would like to visit below </p>
+
+<input type = "text" placeholder = "Enter country name">
+
+</body>
+
+</html>

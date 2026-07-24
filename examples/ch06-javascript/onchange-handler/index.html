@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onchange Handler</title>
+<!-- styling for HTML elelemnts -->
+<style>
+  h1 {
+    color:green;
+    font-family:Times New Roman;
+  }
+</style>
+</head>
+<body>
+<!-- Heading and form -->
+  <h1>Choosing a County to visit will trigger an onchange event handler.</h1>
+  <form>
+    <label for="myCountyChoice"> Select a Transaction: </label>
+    <select id="myCountyChoice" onchange ="myCountyChoiceFunction()">
+      <option value="Kerry">County Kerry</option>
+      <option value="Donegal">County Donegal</option>
+      <option value="Dublin">County Dublin</option>
+      <option value="Cork">County Cork</option>
+    </select>
+  </form>
+</body>
+<script>
+ //onchange Handler
+  function myCountyChoiceFunction() {
+  let choice = document.getElementById("myCountyChoice").value;
+  document.write("You selected to visit: " + choice);
+  }
+</script>
+</html>

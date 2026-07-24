@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Table with Array Data</title>
+<!-- Create table for array elements -->
+<style>
+table, th, td
+ {
+  border: 2px solid black;
+  border-collapse: collapse;
+ }
+  table{width:100%;}
+td
+ {
+  background-color:wheat;
+  text-align: center;
+  width:10%;
+  height:25px;
+  width:25%'
+ }
+th
+  {
+  background-color:burlywood;
+  font-weight: bold;
+  text-align: center;
+  width:25%
+   }
+</style>
+</head>
+<body>
+<table style="width:50%;">
+ <script>
+//Create a Two Dimensional Array
+  childrenbook =
+   [
+      ["Beatrix Potter", "The Tale of Peter Rabbit", 9780723247708],
+      ["Eric Carle", "The Very Hungry Caterpillar", 9780399226908],
+      ["Marcus Pfister", "The Rainbow Fish", 9783314015441],
+   ];
+//Determine the length of the array and subtract one
+ length = childrenbook.length -1;
+counter = 0;
+//Loop todispaly array elements and indexes
+while(counter <= length){
+document.write("<tr>");
+document.write("<th>ARRAY VALUES</th>");
+ for (let i = 0; i <= length; i++) {
+      document.write("<td>" + childrenbook[counter][i] + "</td>");
+ }
+  document.write("<tr>");
+document.write("<th>INDEX VALUES</th>");
+  for(let j= 0; j <= length; j++){
+    document.write("<td> [" + counter + "], [" + j + "] </td>");
+  }
+document.write("</tr>");
+document.write("</tr>");
+counter++
+}
+</script>
+</table>
+</body>
+Produces
+COLUMN
+NOTE: that a multidimensional array will has two indexes.
+The first index will represent the row.
+The second will represent the column.
+ROW
+Childrenbook[1][2]
+Example code of Conditional Assignment Operator
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conditional Assignment Operator</title>
+</head>
+ <script>
+/*Conditional Assignment Operator Allows user to enter a type of food and choice is made as to what food to eat*/
+function getFoodType()
+{
+let whattoeat = document.getElementById('whattoeat').value;
+var typeofFood = (whattoeat == "Italian") ? "Spaghetti" : "Paella";
+alert(typeofFood);
+}
+ </script>
+<body>
+<!--Form to enter type of food to eat -->
+<form onsubmit="getFoodType();">
+  <label for="TypeOfFood">Enter the type of food you would like to try:</label>
+  <input type="text" id="whattoeat">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

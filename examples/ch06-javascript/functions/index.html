@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Functions</title>
+</head>
+ <script>
+//Function definition
+function costOfTickets(priceOfTicket=15, numberOfTickets=1)
+/*NOTE: parameters are optional. If there are none the parentheses are still needed. Default values are given for both parameters.*/
+/*Function calculates the cost for tickets based on input from call in the <form> element and outputs the total cost*/
+{
+  document.write("The total cost for " + numberOfTickets + " tickets costing $" + priceOfTicket + " is: $" + priceOfTicket * numberOfTickets );
+  // this code will return the value of the cost for tickets
+  return priceOfTicket * numberOfTickets;
+ }
+</script>
+<body>
+<!-- HTML form to call the function only one value passed in so default value used  -->
+<form action="" onsubmit="return costOfTickets(15)">
+ <input type="submit">
+</form>
+</body>
+</html>

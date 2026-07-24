@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Contextual Selectors </title>
+
+<!-- Contextual Selectors -->
+
+<style>
+
+ div p {
+
+     color: blueviolet;
+
+     font-weight:bold;
+
+}
+
+ nav>ul
+
+{
+
+color: dodgerblue;
+
+}
+
+ li>a{
+
+     color: orangered;
+
+     font-family: cursive;
+
+     }
+
+div+h2 {
+
+color: green;
+
+font-family: cursive;
+
+}
+
+p~input
+
+{
+
+background-color:cornflowerblue;
+
+}
+
+</style>
+
+</head>
+
+<body><div>
+
+<p> Travel to the country of your dreams! To learn more visit
+
+   <a href="www.ourSite.com">OUR SITE</a> and start your adventure!
+
+</p>
+
+</div>
+
+<div class="image">
+
+  <img src="Flags.png" alt="Flags" >
+
+</div>
+
+<div>
+
+  <nav>
+
+    <ul>
+
+       <li><a href="#">Ireland</a></li>
+
+       <li><a href="#">Spain</a></li>
+
+        <li><a href="#">Italy</a></li>
+
+    </ul>
+
+  </nav>
+
+</div>
+
+<h2>If you did not find a country listed above then perhaps choose one from below </h2>
+
+England <input type="radio" name = "destination">
+
+France <input type = "radio" name = "destination">
+
+Greece <input type="radio" name = "destination">
+
+Germany <input type = "radio" name = "destination">
+
+<p>Otherwise type the name of the country you would like to visit below </p>
+
+<input type = "text" placeholder = "Enter country name">
+
+</body>
+
+</html>

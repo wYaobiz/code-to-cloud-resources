@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for-inexample</title>
+<script>
+//JavaScript that iterates through objects
+function getPetOwner()
+{
+const pet = {pettype: "dog", petname: "Dante", petowner: "Doug"};
+for (const petinfo in pet)
+  {
+     document.write(`${petinfo}: ${pet[petinfo]}`);
+     document.write("<br>");
+  }
+}
+</script>
+</head>
+<body onload ="getPetOwner()">
+</body>
+</html>

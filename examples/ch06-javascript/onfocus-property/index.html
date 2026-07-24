@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onfocus Event Property Approach</title>
+</head>
+<body>
+<!-- Heading and form -->
+  Country to visit: <input type = "text" id = "country"/>
+</body>
+<script>
+ //onfocus Event Property Approach
+  let countrychosen = document.getElementById("country");
+    countrychosen.onfocus = function () {
+    country.style.borderColor = "blueviolet";
+    country.style.background = "cornflowerblue";
+   let Country = document.getElementById('country');
+      Country.value = 'France';
+ }
+</script>
+</html>
