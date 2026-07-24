@@ -48,6 +48,11 @@ Shows PHP embedded in different parts of an HTML document.
 
 **Produces:** the page displaying a welcome heading and a line of text, with the variable values inserted by PHP.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/embedded-php/output.png" alt="Output of embedded-php" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/embedded-php/index.php){ .md-button }
 
 ### Case sensitivity
@@ -77,6 +82,11 @@ Demonstrates that variable names are case sensitive while function names are not
 ```
 
 **Produces:** output confirming that differently-cased variable names are treated as separate, while function names work regardless of case.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/case-sensitivity/output.png" alt="Output of case-sensitivity" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/case-sensitivity/index.php){ .md-button }
 
@@ -108,6 +118,13 @@ echo 'Output double quotes \" Knowledge is power\" around a phrase';
 ```
 
 **Produces:** text where quotes and other special characters appear literally because they were escaped.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/escape-character/output1.png" alt="Output of escape-character" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/escape-character/output2.png" alt="Output of escape-character" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/escape-character/index.php){ .md-button }
 
@@ -240,6 +257,11 @@ echo("<br><br>");
 
 **Produces:** lines showing the result of each arithmetic function applied to sample numbers.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/arithmetic-functions/output.png" alt="Output of arithmetic-functions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/arithmetic-functions/index.php){ .md-button }
 
 ### The .= assignment operator
@@ -268,6 +290,11 @@ echo ($welcomeMessage);
 ```
 
 **Produces:** a message built up piece by piece as text is appended to the string.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/concat-assignment/output.png" alt="Output of concat-assignment" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/concat-assignment/index.php){ .md-button }
 
@@ -329,6 +356,11 @@ else
 ```
 
 **Produces:** lines showing the true or false result of each comparison.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/relational-operators/output.png" alt="Output of relational-operators" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/relational-operators/index.php){ .md-button }
 
@@ -447,6 +479,11 @@ echo ("Value of message after trim() function: " . "<strong> $newMessage </stron
 
 **Produces:** lines showing each string function applied to a sample string.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/string-functions/output.png" alt="Output of string-functions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/string-functions/index.php){ .md-button }
 
 ### Output functions
@@ -479,6 +516,11 @@ printf ("Calculate cost of an item cost $275 by tax rate of 0.0675%%. Final cost
 ```
 
 **Produces:** output produced by both echo and print, including a calculated cost figure.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/output-functions/output.png" alt="Output of output-functions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/output-functions/index.php){ .md-button }
 
@@ -815,6 +857,11 @@ if ( $month >= 6 && $month <=8)
 
 **Produces:** the array values printed by their numeric index positions.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/array-indexes/output.png" alt="Output of array-indexes" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/array-indexes/index.php){ .md-button }
 
 ### Sort functions
@@ -870,6 +917,11 @@ print_r($petowner);
 
 **Produces:** arrays displayed before and after sorting, showing the effect of each sort function.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/sort-functions/output.png" alt="Output of sort-functions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/sort-functions/index.php){ .md-button }
 
 ## Conditionals
@@ -907,6 +959,11 @@ foreach ($pets as $animal)
 ```
 
 **Produces:** a message shown only when the condition is true.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/if-simple/output.png" alt="Output of if-simple" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/if-simple/index.php){ .md-button }
 
@@ -953,6 +1010,11 @@ else
 ```
 
 **Produces:** one of two messages, depending on the tested condition.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/if-else/output.png" alt="Output of if-else" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/if-else/index.php){ .md-button }
 
@@ -1006,6 +1068,17 @@ else
 ```
 
 **Produces:** the message matching whichever condition in the chain is true.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/if-elseif-else/output1.png" alt="Output of if-elseif-else" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/if-elseif-else/output2.png" alt="Output of if-elseif-else" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/if-elseif-else/output3.png" alt="Output of if-elseif-else" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/if-elseif-else/output4.png" alt="Output of if-elseif-else" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/if-elseif-else/index.php){ .md-button }
 
@@ -1067,6 +1140,19 @@ switch ($MovieGenre)
 
 **Produces:** the output for the matching case in the switch.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/switch/output1.png" alt="Output of switch" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/switch/output2.png" alt="Output of switch" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/switch/output3.png" alt="Output of switch" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/switch/output4.png" alt="Output of switch" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/switch/output5.png" alt="Output of switch" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/switch/index.php){ .md-button }
 
 ## Loops
@@ -1114,6 +1200,11 @@ for ($counter=1; $counter <=12; $counter+=1)
 
 **Produces:** a sequence of values produced by the loop.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/for-loop/output.png" alt="Output of for-loop" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/for-loop/index.php){ .md-button }
 
 ### foreach loop using keys
@@ -1141,6 +1232,11 @@ foreach ($petowner as $pet => $owner)
 ```
 
 **Produces:** each key and its value printed in turn.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/foreach-keys/output.png" alt="Output of foreach-keys" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/foreach-keys/index.php){ .md-button }
 
@@ -1178,6 +1274,11 @@ print "</table>" ;
 
 **Produces:** multiplication tables generated by looping over the arrays.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/foreach-multiplication/output.png" alt="Output of foreach-multiplication" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/foreach-multiplication/index.php){ .md-button }
 
 ## Loops (continued)
@@ -1213,6 +1314,11 @@ while($counter < $arraylength)
 
 **Produces:** the loop body running through the array of desserts, executing at least once.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/do-while/output.png" alt="Output of do-while" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/do-while/index.php){ .md-button }
 
 ## Cookies and Sessions
@@ -1245,6 +1351,15 @@ if( !isset($_COOKIE['cityName']) )
 
 **Produces:** output showing a cookie value being stored, read back on a later request, and then removed.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/cookies/output1.png" alt="Output of cookies" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/cookies/output2.png" alt="Output of cookies" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/cookies/output3.png" alt="Output of cookies" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/cookies/index.php){ .md-button }
 
 ### Sessions
@@ -1269,6 +1384,13 @@ if ( !isset($_SESSION['cityName']))
 ```
 
 **Produces:** output showing a session value being set, retrieved, and then cleared.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/sessions/output1.png" alt="Output of sessions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
+    <img src="../../examples/ch08-php/sessions/output2.png" alt="Output of sessions" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/sessions/index.php){ .md-button }
 
@@ -1327,6 +1449,11 @@ echo "<p> Author Name <strong> $Author </strong> <br> Novel Title: <strong> $Tit
 
 **Produces:** two lines showing that double quotes insert the variable's value while single quotes print the variable name literally.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/quotes/output.png" alt="Output of quotes" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/quotes/index.php){ .md-button }
 
 ## Functions and Scope
@@ -1355,6 +1482,11 @@ echo ("The total cost is $" . totalCost());
 ```
 
 **Produces:** the calculated cost returned by the function and printed.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/functions-return/output.png" alt="Output of functions-return" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/functions-return/index.php){ .md-button }
 
@@ -1392,6 +1524,11 @@ integerOrFloat (25.75);
 
 **Produces:** a message reporting the type of the value passed into the function.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/function-type-check/output.png" alt="Output of function-type-check" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/function-type-check/index.php){ .md-button }
 
 ### Pass by value
@@ -1423,6 +1560,11 @@ echo("Value after function call: " . $num);
 
 **Produces:** the variable's value shown before and after the call, unchanged by the function.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/pass-by-value/output.png" alt="Output of pass-by-value" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/pass-by-value/index.php){ .md-button }
 
 ### Pass by reference
@@ -1453,6 +1595,11 @@ echo("Value after function call: " . $num);
 ```
 
 **Produces:** the variable's value shown before and after the call, changed by the function.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/pass-by-reference/output.png" alt="Output of pass-by-reference" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/pass-by-reference/index.php){ .md-button }
 
@@ -1487,6 +1634,11 @@ echo ("<br><br>");
 
 **Produces:** output confirming the variable is available inside the function but not outside.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/local-scope/output.png" alt="Output of local-scope" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/local-scope/index.php){ .md-button }
 
 ### Global scope
@@ -1519,6 +1671,11 @@ echo "When outside the function the following welcome message is displayed:  " .
 ```
 
 **Produces:** the same message displayed both inside and outside the function using the global keyword.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch08-php/global-scope/output.png" alt="Output of global-scope" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch08-php/global-scope/index.php){ .md-button }
 
