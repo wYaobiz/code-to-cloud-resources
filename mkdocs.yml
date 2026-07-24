@@ -80,6 +80,7 @@ nav:
       - "JavaScript Code Examples": code/ch06-javascript.md
       - "PHP Code Examples": code/ch08-php.md
       - "PHP and MySQL Code Examples": code/ch10-php-mysql.md
+      - "Web Server and DevOps Examples": code/ch11-devops.md
   - Errata: errata.md
 
 extra:

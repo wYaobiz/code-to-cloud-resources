@@ -1,0 +1,29 @@
+# Runs the application container alongside a MySQL container.
+# Compose puts both on one network, so the app reaches the database
+# at the hostname "db" rather than an IP address.
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_NAME: myapp
+      DB_USER: appuser
+      DB_PASS: apppassword
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppassword
+      MYSQL_ROOT_PASSWORD: rootpassword
+    volumes:
+      # Named volume keeps the data when the container is recreated
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
