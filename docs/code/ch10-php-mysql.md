@@ -5,6 +5,14 @@ Worked code examples for the PHP and MySQL chapter, drawn from the material used
 !!! note "About these examples"
     These examples query two sample tables, `ChildrensAuthors` and `ChildrensClassics`, and assume a `connect.php` file that opens the database connection. Because they depend on a database, they are shown here as code with a description of their output rather than as a live preview. This is a standard way to share server-side code.
 
+## The Sample Tables
+
+The JOIN examples below query two tables, `ChildrensClassics` and `ChildrensAuthors`, shown here so you can follow what each join returns.
+
+<img src="../../examples/ch10-php-mysql/_shared/childrens-classic-table.png" alt="The ChildrensClassics table" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px; margin-bottom:1rem;">
+
+<img src="../../examples/ch10-php-mysql/_shared/childrens-authors-table.png" alt="The ChildrensAuthors table" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 ## JOINs
 
 ### INNER JOIN
@@ -56,6 +64,11 @@ echo "</table>";
 ```
 
 **Produces:** a table of authors paired with their books, listing only authors who have at least one matching book in the classics table. Authors with no matching book do not appear.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/inner-join/output.png" alt="Output of inner-join" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/inner-join/index.php){ .md-button }
 
@@ -109,6 +122,11 @@ echo "</table>";
 
 **Produces:** a table listing all authors, with book details filled in where a match exists and left blank where an author has no matching book.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/left-join/output.png" alt="Output of left-join" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/left-join/index.php){ .md-button }
 
 ### RIGHT JOIN
@@ -161,9 +179,19 @@ echo "</table>";
 
 **Produces:** a table listing all books, with author details filled in where a match exists and left blank where a book has no matching author.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/right-join/output.png" alt="Output of right-join" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/right-join/index.php){ .md-button }
 
 ## Aggregate Functions
+
+The aggregate examples below use the following table.
+
+<img src="../../examples/ch10-php-mysql/_shared/aggregate-source-table.png" alt="Source table for the aggregate examples" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 
 ### COUNT() function
 
@@ -204,6 +232,11 @@ echo "</table>";
 ```
 
 **Produces:** a single-cell table showing the total number of ISBNs counted.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/count-function/output.png" alt="Output of count-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/count-function/index.php){ .md-button }
 
@@ -251,6 +284,11 @@ echo "</table>";
 
 **Produces:** a table with one row showing the minimum, maximum, and average values calculated across the column.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/min-max-avg/output.png" alt="Output of min-max-avg" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/min-max-avg/index.php){ .md-button }
 
 ### GROUP_CONCAT() with GROUP BY
@@ -295,9 +333,19 @@ echo "</table>";
 
 **Produces:** a table where each author appears once, with all of that author's book titles combined into one cell.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/group-concat/output.png" alt="Output of group-concat" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/group-concat/index.php){ .md-button }
 
 ## Comparison and Conditional Functions
+
+The comparison and conditional examples below use the following table.
+
+<img src="../../examples/ch10-php-mysql/_shared/advanced-source-table.png" alt="Source table for the comparison and conditional examples" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 
 ### GREATEST() function
 
@@ -340,6 +388,11 @@ echo "</table>";
 ```
 
 **Produces:** a table showing the greatest value selected from the compared columns for each row.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/greatest-function/output.png" alt="Output of greatest-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/greatest-function/index.php){ .md-button }
 
@@ -384,6 +437,11 @@ echo "</table>";
 ```
 
 **Produces:** a table showing the smallest value selected from the compared columns for each row.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/least-function/output.png" alt="Output of least-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/least-function/index.php){ .md-button }
 
@@ -431,6 +489,11 @@ echo "</table>";
 
 **Produces:** a table where a column shows one label or another based on the tested condition for each row.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/if-function/output.png" alt="Output of if-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/if-function/index.php){ .md-button }
 
 ### CASE expression
@@ -477,6 +540,11 @@ echo "</table>";
 
 **Produces:** a table where each row shows the value produced by the first matching branch of the CASE expression.
 
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/case-function/output.png" alt="Output of case-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
+
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/case-function/index.php){ .md-button }
 
 ### IFNULL() function
@@ -517,6 +585,11 @@ echo "</table>";
 ```
 
 **Produces:** a table where any NULL value is replaced by the supplied default, and other values appear unchanged.
+
+??? note "Check your understanding"
+    Think about what the code above will produce, then expand to compare with the actual output.
+
+    <img src="../../examples/ch10-php-mysql/ifnull-function/output.png" alt="Output of ifnull-function" style="max-width:100%; border:1px solid var(--md-default-fg-color--lightest); border-radius:4px;">
 
 [View full source](https://github.com/wYaobiz/code-to-cloud-resources/blob/main/src/ch10-php-mysql/ifnull-function/index.php){ .md-button }
 
